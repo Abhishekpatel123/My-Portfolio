@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 npx create-react-app client // client is a folder name 
 
 #                                  `This is version 1`
@@ -46,4 +46,4 @@ function App() {
 export default App;
 ```
 
-
+ -->
