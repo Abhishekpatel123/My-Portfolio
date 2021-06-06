@@ -1,43 +1,43 @@
 import React, { useEffect, useRef } from 'react'
 import './Navbar.css'
 import { Link } from 'react-scroll'
-import navData from '../configs/Navbar'
+import navData from '../../configs/nav_data'
+
 function Navbar() {
     const nav = useRef();
 
     function scrollFun() {
-        if (window.scrollY > 10) nav.current.classList.add("navbar-scroll")
-        else nav.current.className = "navbar"
+        if (window.scrollY > 50) nav.current.classList.add("header-scroll")
+        else nav.current.classList.remove("header-scroll")
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', scrollFun)
+        window.addEventListener('scroll', scrollFun);
+        // return window.removeEventListener('scroll', scrollFun)
     }, [])
 
-
     return (
-        <nav ref={nav} className="navbar">
+        <header id="header" ref = {nav}>
             <div className="container">
-                <div className="navbar_container">
-                    <ul className="navbar_left">
-                        <div>
-                            Abhi.PL
-                        </div>
-                    </ul>
-                    <ul className="navbar_right">
+                <div className="content">
+                    <div className="logo">
+                        <span>A </span> .Patel
+                    </div>
+                    <nav>
                         {
-                            navData.map((li, idx) => (
-                                <li key={idx}>
-                                    <Link activeClass="active" offset={li.offset} smooth spy to={li.to} >{li.name}</Link>
-                                </li>
+                            navData.map(link => (
+                                <Link
+                                    activeClass="active"
+                                    className="link"
+                                    key={link.id}
+                                    to={link.to}
+                                    offset={link.offset}>{link.name}</Link>
                             ))
                         }
-                    </ul>
-
+                    </nav>
                 </div>
-
             </div>
-        </nav>
+        </header>
     )
 }
 

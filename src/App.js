@@ -1,8 +1,14 @@
-import './App.css';
+import { Redirect, Route, Switch } from 'react-router-dom'
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <h1>hey </h1>
+    <Switch>
+      <Route path="/v1" component={LandingPage} />
+      <Route path="/" >
+        <Redirect to="/v1" />
+      </Route>
+    </Switch>
   );
 }
 

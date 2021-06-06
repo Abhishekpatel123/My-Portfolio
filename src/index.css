@@ -1,0 +1,32 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+/* default color of the website  */
+:root {
+    --_primary : #c3a9ff;
+    --_secondary : orange;
+    /* --_success : ''; */
+    /* --_error : ''; */
+    --_light : whitesmoke;
+    --_dark : #333;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background-color: var(--_secondary);
+    border-radius: 2rem;
+}
+
+@media (max-width: 650px){
+    #header .content{
+        flex-direction: column;
+    }
+}
