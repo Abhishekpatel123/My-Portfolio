@@ -4,26 +4,30 @@ import './Languages.css'
 
 function Languages() {
     return (
-        <div id="languages">
+        <div className="language">
             <div className="container">
-                <section className="content">
-                    <h3 className = "content_title">TOP Languages
+                <section className="language_content">
+                    <h3 className="content_title">TOP Languages
                     {" "}{" "}<span>to learn</span>
                     </h3>
-                    <div className = "card_container">
+                    <div className="card_container">
                         {
                             languages.map(lang => (
-                                <div className="lan_card">
-                                    <img alt={lang.name} src={lang.img} />
-                                    <div className="card_content">
-                                        <h4>{lang.name}</h4>
-                                        <p>{lang.title}</p>
+                                <div className="card">
+                                    <div className="card_top">
+                                        <img alt={lang.name} src={lang.img} />
+                                        <h4
+                                        className = "orange_text_h4"
+                                        >{lang.name}</h4>
                                     </div>
+                                    <p>{lang.title}</p>
                                 </div>
                             ))
                         }
                     </div>
                 </section>
+
+
             </div>
         </div>
     )

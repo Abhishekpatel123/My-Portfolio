@@ -7,26 +7,63 @@
 
 /* default color of the website  */
 :root {
-    --_primary : #c3a9ff;
+    /* colors */
+    --_primary : #9a6eff;
     --_secondary : orange;
-    /* --_success : ''; */
-    /* --_error : ''; */
     --_light : whitesmoke;
     --_dark : #333;
+
+    /* font families  */
+    --_logo_ff: 'Sigmar One', cursive;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
+/* common css  */
+.container{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid rgba(197, 37, 37, 0.938);
 }
 
-::-webkit-scrollbar-thumb{
-
-    background-color: var(--_secondary);
-    border-radius: 2rem;
+.orange_text_h4{
+    color: var(--_secondary);
+    font-weight: 400;
+    text-shadow: 1px 1px #333;
 }
+
+
 
 @media (max-width: 650px){
     #header .content{
         flex-direction: column;
     }
 }
+
+
+
+/* test */
+.main{
+    padding: calc(100px + 10vh) 0;
+    /* background: gray url(/images/bg.jpg); */
+    min-height: 100vh;
+    height: 100vh;
+}
+.main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    height: 100%;
+}
+
+/* test */
+
+
+/* scrollbar start */
+::-webkit-scrollbar { width: 5px; }
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--_secondary);
+    border-radius: 2rem;
+}
+/* scrollbar end */

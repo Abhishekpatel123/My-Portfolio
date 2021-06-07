@@ -13,7 +13,6 @@ function Navbar() {
 
     useEffect(() => {
         window.addEventListener('scroll', scrollFun);
-        // return window.removeEventListener('scroll', scrollFun)
     }, [])
 
     return (
@@ -21,7 +20,7 @@ function Navbar() {
             <div className="container">
                 <div className="content">
                     <div className="logo">
-                        <span>A </span> .Patel
+                        A .Patel
                     </div>
                     <nav>
                         {

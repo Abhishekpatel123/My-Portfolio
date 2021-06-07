@@ -13,8 +13,7 @@
     
 }
 .card_content{
-    background-color: gray;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
 }
 .card_content > *{
     margin: .3rem 0;
