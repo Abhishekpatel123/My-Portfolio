@@ -1,18 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import FeedbackIllustration from '../../../assets/FeedbackIllustration'
 import './Feedback.css'
 
 function Feedback() {
-    return (
-        <div id="feedback">
-            <div className="container">
-                <div className="content">
-                    <h3 className="content_title">Feedback
-                    {" "}{" "}<span>to update</span>
-                    </h3>
 
-                    <form>
+    useEffect(()=>{
+        const progressItems = document.querySelectorAll('.progressItem');
+        const progressItem = document.querySelector('.progressItem');
+        progressItem.addEventListener('hover',function (){
+            console.log('hovered ')
+        })
+    },[])
+    return (
+        <div className="feedback">
+            <div className="container">
+                <h3 className="content_title">Feedback<span>to update</span>
+                </h3>
+                <div className="feedback_content">
+
+                    <div className="feedbackIllustration">
+                        <FeedbackIllustration
+                            width="70%"
+                            height="70%"
+                            color="orange"
+                        />
+                    </div>
+                    <form className="feedback_form">
                         <div className="field_content">
-                            <label for = "name" >Name</label>
+                            <label for="name" >Name</label>
                             <input
                                 className="input"
                                 type="text"
@@ -20,16 +35,26 @@ function Feedback() {
                                 placeholder="Enter your good name"
                             />
                         </div>
+
                         <div className="field_content">
-                            <label for = "suggestion">Suggestion</label>
+                            <label for="rate">Rate it</label>
+                            <div className = "progress">
+                                <div className = "progressItem">33%</div>
+                            </div>
+                        </div>
+
+                        <div className="field_content">
+                            <label for="suggestion">Suggestion</label>
                             <textarea
+                                id="suggesstion "
                                 name="suggestion"
-                                placeholder="Enter your suggestion 👍"
+                                placeholder="Please then us your region for giving this score hrer 👍"
                                 className="input"
+                                rows={10}
                             />
                         </div>
-                        <button type = "submit" className = "feetback_btn">
-                            Feed
+                        <button type="submit" className="feetback_btn">
+                            SEND FEEDBACK
                         </button>
                     </form>
                 </div>

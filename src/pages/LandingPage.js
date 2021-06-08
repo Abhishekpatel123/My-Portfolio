@@ -34,7 +34,7 @@ function Home() {
             <Banner />
             <Languages />
             <Projects />
-            <Skills />
+            {/* <Skills /> */}
             <Feedback />
         </>
         // {/* <Service /> */}

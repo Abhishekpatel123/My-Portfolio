@@ -31,6 +31,17 @@
 }
 
 
+.content_title{
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.content_title > span{
+    font-size: .8rem;
+    font-weight: 300;
+    margin-left: 1rem;
+}
 
 @media (max-width: 650px){
     #header .content{
