@@ -20,6 +20,25 @@ function Home() {
         "MERN STACK DEVELOPER",
         "APP DEVELOPER"
     ]
+
+    const data_in_number = [
+        {
+            title: 'ALL OVER LIKES',
+            number: '200+',
+        },
+        {
+            title: 'PROJECTS COMPLETED',
+            number: '40+',
+        },
+        {
+            title: 'YEAR OF EXPERIENCE',
+            number: '1+',
+        },
+        {
+            title: 'RUNNDING PROJECTS',
+            number: '10+',
+        },
+    ]
     return (
         <>
             <Navbar />
@@ -31,11 +50,31 @@ function Home() {
                     </div>
                 </div>
             </section> */}
-            <Banner />
-            <Languages />
-            <Projects />
-            {/* <Skills /> */}
-            <Feedback />
+            <main className="allContent">
+                <Banner />
+                <div className="data_in_number" >
+                    <div className="container" >
+                        <div className="content">
+                            <hr />
+                            <div className="data_container">
+                                {
+                                    data_in_number.map(({ number, title }, idx) => (
+                                        <div>
+                                            <h1 style={{ textAlign: 'center' , margin : '.5rem 0' }}>{number}</h1>
+                                            <h5 style={{color : 'gray'}}>{title}</h5>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                            <hr />
+                        </div>
+                    </div>
+                </div>
+                <Languages />
+                <Projects />
+                {/* <Skills /> */}
+                <Feedback />
+            </main>
         </>
         // {/* <Service /> */}
         // {/* <Skills /> */}

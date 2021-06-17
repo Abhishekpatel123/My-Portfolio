@@ -9,12 +9,23 @@
 :root {
     /* colors */
     --_primary : #9a6eff;
+    --_primary_gradient : linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);
     --_secondary : orange;
+    --_secondary_gradient : linear-gradient(to left, #f2994a, #f2c94c); 
     --_light : whitesmoke;
-    --_dark : #333;
+    --_dark : black;
+
+    /* background: #667db6;  fallback for old browsers */
+    /* background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 
     /* font families  */
     --_logo_ff: 'Sigmar One', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* common css  */
@@ -43,13 +54,18 @@
     margin-left: 1rem;
 }
 
-@media (max-width: 650px){
-    #header .content{
-        flex-direction: column;
-    }
+
+@media(max-width : 960px){
+  html{
+    font-size: 80%;
+  }   
 }
 
-
+@media(max-width : 768px){
+    html{
+        font-size: 70%;
+      }   
+}
 
 /* test */
 .main{
@@ -74,7 +90,7 @@
 ::-webkit-scrollbar { width: 5px; }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--_secondary);
+    background: var(--_secondary_gradient);
     border-radius: 2rem;
 }
 /* scrollbar end */

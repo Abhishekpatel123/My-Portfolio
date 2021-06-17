@@ -1,0 +1,18 @@
+.allContent{
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;   
+}
+.allContent > *{
+    scroll-snap-align: start;
+    overflow-y: scroll;
+}
+.data_in_number {
+    padding: 2rem 0;
+    background: var(--_secondary_gradient);
+    margin: 4rem 0;
+}
+.data_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

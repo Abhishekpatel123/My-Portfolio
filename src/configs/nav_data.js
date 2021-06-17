@@ -6,16 +6,16 @@ export default [
         offset: "10px"
     },
     {
-        id : "service222",
-        to: "service",
-        name: "Service",
+        id : "language222",
+        to: "language",
+        name: "Language",
         offset: "10px"
 
     },
     {
-        id : "skills333",
-        to: "skills",
-        name: "Skills",
+        id : "projects333",
+        to: "projects",
+        name: "Project",
         offset: "10px"
 
     },
