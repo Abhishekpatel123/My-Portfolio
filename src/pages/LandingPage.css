@@ -10,9 +10,22 @@
     padding: 2rem 0;
     background: var(--_secondary_gradient);
     margin: 4rem 0;
+    box-shadow: 0 0 5px gray;
+    opacity: 0;
+    transform: translateY(-10vh);
+}
+.data_count_animation{
+    transition: all ease-in-out .5s;
+    opacity: 1;
+    transform: translateY(0);
 }
 .data_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.card_container_animation{
+    transition: all ease .5s;
+    opacity: 1;
+    transform: translateY(0%);
 }

@@ -1,0 +1,65 @@
+.projects {
+    background: var(--_dark); color : var(--_light);
+    padding : 3rem 0;
+}
+
+.projects_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 2rem;
+}
+
+.projects .status{
+    color: var(--_primary);
+    /* text-shadow: 1px 1px blueviolet; */
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.project_card{
+    padding: 1rem;
+    margin : 1rem 0; 
+    /* border: 2px solid var(--_primary);  */
+    border-radius: 1rem;
+    /* background-color: rgb(255, 255, 255); */
+    box-shadow: 0 0 12px -4px var(--_primary);
+    cursor: pointer;
+}
+
+.project_card:hover{
+    background-color: rgb(58, 58, 58);
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem 0;
+}
+.tags > button  {
+    padding : .4rem 1.4rem;
+    color: var(--_primary);
+    border : none;
+    /* border: 1px solid var(--_primary); */
+     background: rgba(173, 173, 255, 0.158);
+     /* background: rgba(255, 166, 0, 0.158); */
+    }
+
+.project_card > h5{
+    font-size: 1.2rem;
+     text-transform: uppercase;
+}
+.project_card > p{ 
+    font-size: .8rem ;
+     margin : 1rem 0 ;
+      line-height: 1.5rem;
+    }
+
+.card_container{padding : 1.5rem 0 ;}
+
+
+
+
+

@@ -1,48 +1,94 @@
-.language{
-    min-height: 100vh;
-    padding: 10vh 0;
+.language {
+  min-height: 100vh;
+  padding: 10vh 0;
+}
+.language .card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  perspective: 500;
+}
+.language .card_container > * {
+  border: 1px solid rebeccapurple;
+  padding: 1rem;
+}
+.lang_outer_card {
+    min-height: 200px;
+    border: 1px solid var(--_secondary);
+    border-radius: 1rem;
+    perspective: 1000px;
+}
+.lan_inner_card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 1rem;
+  box-shadow: 0 13px 30px rgb(0, 0, 0, 0.3) , 0 0px 15px rgb(0, 0, 0, 0.5);
 }
 
-.language .card_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
-    grid-gap: 2rem;
+.lan_inner_card .card_front {
+  position: relative;
+  background-color: var(--_primary);
+  color: black;
+}
+.lan_inner_card .card_back {
+  color: white;
+  background-color: #2d3436;
+  transform: rotateY(180deg);
+}
+.lang_outer_card:hover  .lan_inner_card{
+  transform: rotateY(180deg);
+  border-radius: 1rem;
 }
 
-
-.card{
-    background: var(--_light);
-    box-shadow: 0 2px 10px -2px var(--_secondary);
-    padding: 1rem;
-    transition: all ease-in-out .5s;
+.lang_outer_card:hover h1{
+    transform: translateZ(200px);
 }
-.card:hover{
-    color: var(--_light);
-    background: var(--_dark);
-    animation: card 2s .5s ease  infinite alternate forwards ;
+.lan_inner_card .card {
+  border: none;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-.card_top{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
 
-.card img{ width : 100px }
-
-.card p{
-    font-size: .7rem;
-    letter-spacing: .8px;
-    font-weight: 900;
-
-
+.lan_inner_card h1 {
+  font-weight: 800;
+  color: white;
+  transform: translateZ(0);
+  transition: all .5s ease;
+  text-transform: uppercase;
+  font-family: verdana;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 
 @keyframes card {
-    0%{ transform: rotate(5deg) scale(1); }
-    50%{ transform: rotate(0deg) scale(1.04); }
-    100%{ transform: rotate(-5deg) scale(1); }
+  0% {
+    transform: rotate(5deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.04);
+  }
+  100% {
+    transform: rotate(-5deg) scale(1);
+  }
 }
-.lan_card > img{
-    width: 100%;
+.lan_card > img {
+  width: 100%;
 }
-

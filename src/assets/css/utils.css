@@ -1,0 +1,27 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+    /* border: 2px solid rgba(197, 37, 37, 0.938); */
+}
+
+.orange_text_h4{
+    color: var(--_secondary);
+    font-weight: 400;
+    text-shadow: 1px 1px #333;
+}
+
+
+.content_title{
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.content_title > span{
+    font-size: .8rem;
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+.my-12{
+  margin: 12px 0;
+}

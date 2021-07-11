@@ -10,13 +10,20 @@
 
     background-image: url('../../../assets/images/bg.jpg');
     background-attachment: fixed;
-    background-color: #f0eafdb4;
+    background-color: #1f1a2ab4;
     background-blend-mode: hard-light;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
+    opacity: 0;
+    transform: translateY(-10vh);
     /* background-color: var(--_primary); */
+}
+
+.data_count_animation{
+    transition: all ease-in-out .5s;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .banner  h1{

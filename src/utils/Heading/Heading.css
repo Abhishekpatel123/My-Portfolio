@@ -1,0 +1,9 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.heading > h1{
+    color: var(--_secondary);
+    border-bottom: 1px solid var(--_secondary);
+}

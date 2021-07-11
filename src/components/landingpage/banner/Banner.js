@@ -24,7 +24,7 @@ export default function Banner() {
 
     }, [])
     return (
-        <div className="banner">
+        <div name = "banner" className="banner"  data-rellax-speed = "10" >
             <div className="container
             ">
                 <div className="banner_content">

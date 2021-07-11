@@ -1,0 +1,20 @@
+/* default color of the website  */
+:root {
+    /* colors */
+    --_primary : #9a6eff;
+    --_primary_dark : #583f94;
+    --_primary_light : #996eff83;
+    --_primary_gradient : linear-gradient(to right top, #9a6eff, #8960e7, #7752cf, #6744b8, #5637a1);
+    --_secondary : #FFAB0B;
+    --_secondary_gradient : linear-gradient(to left, #f2994a, #f2c94c); 
+    --_light : whitesmoke;
+    --_dark : black;
+    --radius-5 : 5px;
+    
+    /* font families  */
+    --_logo_ff: 'Sigmar One', cursive;
+    
+        /* background: #667db6;  fallback for old browsers */
+        /* background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);  Chrome 10-25, Safari 5.1-6 */
+        /* background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

@@ -1,57 +1,22 @@
+@import './assets/css/root_variable.css';
+@import './assets/css/utils.css';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 *{
     padding : 0;
     margin : 0;
     box-sizing: border-box;
-    font-family: 'Merriweather', serif;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Fira Sans', sans-serif; */
 }
 
-/* default color of the website  */
-:root {
-    /* colors */
-    --_primary : #9a6eff;
-    --_primary_gradient : linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);
-    --_secondary : orange;
-    --_secondary_gradient : linear-gradient(to left, #f2994a, #f2c94c); 
-    --_light : whitesmoke;
-    --_dark : black;
-
-    /* background: #667db6;  fallback for old browsers */
-    /* background: -webkit-linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6);  Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to left, #667db6, #0082c8, #0082c8, #667db6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-    /* font families  */
-    --_logo_ff: 'Sigmar One', cursive;
-}
 
 html{
     scroll-behavior: smooth;
-}
-
-/* common css  */
-.container{
-    width: 80%;
-    margin: 0 auto;
-    border: 2px solid rgba(197, 37, 37, 0.938);
-}
-
-.orange_text_h4{
-    color: var(--_secondary);
-    font-weight: 400;
-    text-shadow: 1px 1px #333;
-}
-
-
-.content_title{
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    font-weight: 800;
-}
-
-.content_title > span{
-    font-size: .8rem;
-    font-weight: 300;
-    margin-left: 1rem;
 }
 
 
@@ -63,7 +28,7 @@ html{
 
 @media(max-width : 768px){
     html{
-        font-size: 70%;
+        font-size: 85%;
       }   
 }
 
