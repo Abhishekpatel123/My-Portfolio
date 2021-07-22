@@ -4,10 +4,10 @@ import LandingPage from "./pages/LandingPage";
 function App() {
   return (
     <Switch>
-      <Route path="/v1" component={LandingPage} />
-      <Route path="/" >
+      <Route path="/" component={LandingPage} />
+      {/* <Route path="/" >
         <Redirect to="/v1" />
-      </Route>
+      </Route> */}
     </Switch>
   );
 }

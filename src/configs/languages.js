@@ -55,19 +55,4 @@ export default [
         title: "No SQL Database",
         img: "https://source.unsplash.com/400x200/?language,programming",
     },
-
-    {
-        id: 9,
-        name1: "Mongoose",
-        name2: "Mongoose",
-        title: "Run time enveroment for server",
-        img: "https://source.unsplash.com/400x200/?language,programming",
-    },
-    {
-        id: 10,
-        name1: "Graphql",
-        name2: "Graphql",
-        title: "Run time enveroment for server",
-        img: "https://source.unsplash.com/400x200/?language,programming",
-    },
 ]

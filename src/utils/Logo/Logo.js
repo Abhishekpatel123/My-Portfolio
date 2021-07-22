@@ -6,7 +6,8 @@ import videoLogo from '../../assets/video/_Logo.mp4';
 function Logo() {
     return (
         <div className="logo">
-            <img src={LogoImage} />
+            {/* <img src={LogoImage} /> */}
+            <h1>A.Patel</h1>
         </div>
     )
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import './footer.css'
 import { FiSmartphone } from 'react-icons/fi'
 import { HiOutlineMail } from 'react-icons/hi'
-import { GrLocation } from 'react-icons/gr'
+import { GrLocationPin } from 'react-icons/gr'
+import { HiLocationMarker } from 'react-icons/hi'
 import videoLogo from '../../../assets/video/_Logo.mp4';
 import Logo from '../../../utils/Logo/Logo'
 
@@ -22,10 +23,9 @@ function Footer() {
 
                     </div>
                     <div>
-                        <GrLocation />
+                        <HiLocationMarker />
                         <p>No 5, North street ,</p>
                         <p> Indore ,Madhya pradesh ,india </p>
-
                     </div>
                 </div>
             </div>
@@ -41,11 +41,10 @@ function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <GrLocation />
-                        <GrLocation />
-                        <GrLocation />
-                        <GrLocation />
-
+                        <HiLocationMarker />
+                        <HiLocationMarker />
+                        <HiLocationMarker />
+                        <HiLocationMarker />
                     </div>
                 </div>
             </div>

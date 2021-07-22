@@ -16,11 +16,15 @@
     display: flex;
     justify-content: space-around;
     /* align-items: center; */
-    padding: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: .8rem;
 }
+
 .footer_content{ align-items: center;}
 .social_content > *{
     text-align: center;
+    min-width: 220px;
 }
 .social_content svg{
     color: var(--_primary_dark);

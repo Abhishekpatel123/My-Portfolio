@@ -4,17 +4,24 @@
 }
 .interest_content {
   display: grid;
-  grid-template-columns: repeat(5 , 1fr);
-  grid-template-rows: repeat(6 , 1fr);
-  grid-gap: 1rem;
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-rows: repeat(6, 1fr); */
+  grid-template-areas:
+    "medium medium large large large"
+    "medium medium large large large"
+    "medium2 medium2 large large large"
+    "medium2 medium2 small tall tall"
+    "wide wide wide tall tall"
+    "wide wide wide tall tall";
+  /* grid-gap: 1rem; */
   min-height: 85vh;
-  margin: 2rem 0;  
+  margin: 2rem 0;
 }
 
-.interest_content .medium{
-  grid-column: span 2;
-  grid-row: span 2;
-  
+.interest_content .medium {
+  /* grid-column: span 2; */
+  /* grid-row: span 2; */
+  grid-area: medium;
   background: url(../../../assets/images/coding.jpg);
   background-color: rgba(0, 0, 0, 0.719);
   background-blend-mode: multiply;
@@ -22,11 +29,14 @@
   background-size: cover;
   background-position: center;
 }
+.interest_content .medium.item3 {
+  grid-area: medium2;
+}
+.interest_content .large {
+  /* grid-column: span 3; */
+  /* grid-row: span 3; */
+  grid-area: large;
 
-
-.interest_content .large{
-  grid-column: span 3;
-  grid-row: span 3;
   background: url(../../../assets/images/robot.jpg);
   background-color: rgba(31, 21, 7, 0.719);
   background-blend-mode: multiply;
@@ -35,31 +45,57 @@
   background-position: center;
 }
 
-.interest_content .small{
-  grid-column: span 1;
-  grid-row: span 1;
+.interest_content .small {
+  grid-area: small;
+
+  /* grid-column: span 1; */
+  /* grid-row: span 1; */
 }
 
-.interest_content .tall{
-  grid-column: span 2;
-  grid-row: span 3;
+.interest_content .tall {
+  grid-area: tall;
+  /* grid-column: span 2; */
+  /* grid-row: span 3; */
 }
 
-
-.interest_content .wide{
-  grid-column: span 3;
-  grid-row: span 2;
+.interest_content .wide {
+  /* grid-column: span 3; */
+  /* grid-row: span 2; */
+  grid-area: wide;
   background: url(../../../assets/images/learning.jpg);
   background-color: rgba(31, 21, 7, 0.719);
   background-blend-mode: multiply;
   color: whitesmoke;
   background-size: cover;
   background-position: center;
-
 }
-.interest_content > *{
+.interest_content > * {
   background-color: var(--_secondary);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 760px) {
+  .interest_content {
+    font-size: 10px;
+    color: white;
+    grid-template-areas:
+      "medium medium medium medium medium medium"
+      "medium medium medium medium medium medium"
+      "small  small small tall tall tall"
+      "small small small tall tall tall"
+      "large large large medium2 medium2 medium2"
+      "large large large medium2 medium2 medium2"
+      "wide wide wide wide wide wide"
+      "wide wide wide wide wide wide";
+    grid-gap: 0.2rem;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
 }
