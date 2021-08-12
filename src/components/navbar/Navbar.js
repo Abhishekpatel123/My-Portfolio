@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-scroll'
-import navData from '../../configs/nav_data'
+import navData from '../../data/nav_data'
 import Logo from '../../utils/Logo/Logo';
 
 function Navbar() {

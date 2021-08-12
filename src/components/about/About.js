@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Heading from '../../utils/Heading/Heading'
 import './About.css'
 import MYImage from '../../assets/images/abhishek.jpeg'
+import staticData from '../../data/staticData'
 
 function About() {
 
@@ -34,15 +35,15 @@ function About() {
 
     return (
         <div className="about container" >
-            <Heading heading="About me" />
+            <Heading heading={staticData.about.heading} />
             <div className='about_perspective '>
                 <div className=" about_content">
                     <div className="left">
                         <img src={MYImage} alt="my photo" />
                     </div>
                     <div className="right">
-                        <h2>I'am Abhishek</h2>
-                        <p>I am a Fullstack Web Developer from Hoshangabad, Madhya Pradesh. I have serious passion for Backend development and programming.I am more centered towards Backend but can work with Frontend as well.</p>
+                        <h2>{staticData.about.title}</h2>
+                        <p>{staticData.about.description}</p>
                     </div>
                 </div>
             </div>
