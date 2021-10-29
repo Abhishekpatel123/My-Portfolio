@@ -1,11 +1,23 @@
-import React, { useEffect } from "react";
-import languages from "../../../data/languages";
+import React, { useEffect, useRef, useState } from "react";
 import Heading from "../../../utils/Heading/Heading";
 import Card from "./Card";
 import "./Languages.css";
 import staticData from "../../../data/staticData";
 
 function Languages() {
+  const [skills, setSkills] = useState(null);
+  useEffect(() => {
+    // api
+    //   .getSkills()
+    //   .then((result) => console.log(result, "resutl"))
+    //   .catch((err) => {
+    //     console.log(err, "error ");
+    //   });
+    fetch("http://localhost:1337/skills")
+      .then((result) => result.json())
+      .then((result) => setSkills(result))
+      .catch((err) => console.log(err, "er"));
+  }, []);
   // const observe = new IntersectionObserver((entries, observe) => {
   //     entries.forEach(entry => {
   //         if (!entry.isIntersecting) {
@@ -32,8 +44,8 @@ function Languages() {
             {staticData.skills.title} <span>{staticData.skills.sub_title}</span>
           </h3>
           <div className="card_container">
-            {languages.map((lang) => (
-              <Card lang={lang} />
+            {skills?.map((lang, idx) => (
+              <Card key={idx} lang={lang} />
             ))}
           </div>
         </section>

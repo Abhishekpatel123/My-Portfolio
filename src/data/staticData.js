@@ -12,7 +12,7 @@ export default {
   data_in_number: [
     {
       title: "PROJECTS COMPLETED",
-      number: "20+",
+      number: "5+",
     },
     {
       title: "YEAR OF EXPERIENCE",
@@ -20,7 +20,7 @@ export default {
     },
     {
       title: "RUNNDING PROJECTS",
-      number: "5+",
+      number: "8+",
     },
   ],
   about: {

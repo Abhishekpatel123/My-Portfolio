@@ -9,8 +9,14 @@ import Interest from "../components/landingpage/interest/Interest";
 import About from "../components/about/About";
 import Project from "../components/project/Project";
 import staticData from "../data/staticData";
+import Experience from "../components/experience/Experience";
+import { useDispatch } from "react-redux";
+import { setGlobal } from "../store/global";
+import loadData from "../services/loadData";
 
 function Home() {
+  const disptach = useDispatch();
+
   let data;
 
   const observer = new IntersectionObserver(
@@ -37,6 +43,13 @@ function Home() {
       observer.observe(ele);
     });
     return () => {};
+  }, []);
+
+  useEffect(() => {
+    const URL = "http://localhost:1337/global";
+    loadData(URL).then((respose) => {
+      disptach(setGlobal(respose));
+    });
   }, []);
 
   return (
@@ -67,6 +80,7 @@ function Home() {
         <Languages />
         <Project />
         <Interest />
+        <Experience />
         <Contact />
         <Footer />
       </main>
