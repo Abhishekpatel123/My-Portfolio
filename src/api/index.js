@@ -5,4 +5,6 @@ const api = {
   getSkills: () => instance.get("/skills"),
 };
 
+
+
 export default api

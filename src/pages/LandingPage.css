@@ -1,6 +1,7 @@
 .allContent{
     scroll-snap-type: y mandatory;
-    overflow-y: auto;   
+    overflow-y: auto;  
+    width: 100%; 
 }
 .allContent > *{
     scroll-snap-align: start;

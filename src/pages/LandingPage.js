@@ -10,13 +10,8 @@ import About from "../components/about/About";
 import Project from "../components/project/Project";
 import staticData from "../data/staticData";
 import Experience from "../components/experience/Experience";
-import { useDispatch } from "react-redux";
-import { setGlobal } from "../store/global";
-import loadData from "../services/loadData";
 
-function Home() {
-  const disptach = useDispatch();
-
+function Home({ inactive }) {
   let data;
 
   const observer = new IntersectionObserver(
@@ -45,17 +40,10 @@ function Home() {
     return () => {};
   }, []);
 
-  useEffect(() => {
-    const URL = "http://localhost:1337/global";
-    loadData(URL).then((respose) => {
-      disptach(setGlobal(respose));
-    });
-  }, []);
-
   return (
-    <>
-      <Navbar />
-      <main className="allContent">
+    <div>
+      <Navbar inactive={inactive} />
+      <main className={`allContent container `}>
         <Banner />
 
         <div className="data_in_number">
@@ -84,7 +72,7 @@ function Home() {
         <Contact />
         <Footer />
       </main>
-    </>
+    </div>
   );
 }
 

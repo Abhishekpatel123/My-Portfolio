@@ -5,7 +5,7 @@ import "./Languages.css";
 import staticData from "../../../data/staticData";
 
 function Languages() {
-  const [skills, setSkills] = useState(null);
+  const [skills, setSkills] = useState([]);
   useEffect(() => {
     // api
     //   .getSkills()
@@ -13,11 +13,14 @@ function Languages() {
     //   .catch((err) => {
     //     console.log(err, "error ");
     //   });
-    fetch("http://localhost:1337/skills")
-      .then((result) => result.json())
-      .then((result) => setSkills(result))
-      .catch((err) => console.log(err, "er"));
-  }, []);
+    // fetch("http://localhost:1337/skills")
+    //   .then((result) => result.json())
+    //   .then((result) => setSkills(result))
+    //   .catch((err) => console.log(err, "er"));
+  
+    }, []);
+
+
   // const observe = new IntersectionObserver((entries, observe) => {
   //     entries.forEach(entry => {
   //         if (!entry.isIntersecting) {

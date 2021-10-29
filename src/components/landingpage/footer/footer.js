@@ -21,7 +21,7 @@ function Footer() {
           </div>
           <div>
             <HiOutlineMail />
-            <p>{global.contactEmail}</p>
+            <p>{global?.contactEmail}</p>
             <p>enquiry@a.patel.com</p>
           </div>
           <div>

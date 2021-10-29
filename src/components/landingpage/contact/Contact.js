@@ -13,19 +13,19 @@ function Contact() {
 
   const handleSubmit = () => {
     const URL = "http://localhost:1337/feedbacks";
-    fetch(URL, {
-      method: "POST",
-      body: JSON.stringify(input),
-      headers: {
-      "Content-Type": "application/json",
-      },
-    })
-      .then((result) => result.json())
-      .then((result) => {
-          console.log(result , 'result')
-        alert("Succesfully submitted feedback.");
-      })
-      .catch((err) => console.log(err, "err"));
+    // fetch(URL, {
+    //   method: "POST",
+    //   body: JSON.stringify(input),
+    //   headers: {
+    //   "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((result) => result.json())
+    //   .then((result) => {
+    //       console.log(result , 'result')
+    //     alert("Succesfully submitted feedback.");
+    //   })
+    //   .catch((err) => console.log(err, "err"));
   };
 
   return (

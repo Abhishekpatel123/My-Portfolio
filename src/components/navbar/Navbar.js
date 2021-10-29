@@ -5,7 +5,7 @@ import navData from "../../data/nav_data";
 import Logo from "../../utils/Logo/Logo";
 import { useSelector } from "react-redux";
 
-function Navbar() {
+function Navbar({ inactive }) {
   const header = useRef();
   const nav = useRef();
   const [navScroll, setNavScroll] = useState(false);
@@ -59,12 +59,14 @@ function Navbar() {
   return (
     <header
       id="header"
-      className={navScroll ? "header-scroll" : "head"}
+      className={`route-container ${inactive ? "inactive" : ""} ${
+        navScroll ? "header-scroll" : "head"
+      }`}
       ref={header}
     >
       <div className="container">
         <div className="content">
-          <Logo />
+          {/* <Logo /> */}
 
           <div className="bar" onClick={(e) => openSidebar(e)}>
             <span className={open ? "line" : null}></span>

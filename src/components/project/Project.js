@@ -4,14 +4,14 @@ import "./Project.css";
 import staticData from "../../data/staticData";
 
 function Project() {
-  const [projects, setProjects] = useState(null);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     const url = "http://localhost:1337/projects";
-    fetch(url)
-      .then((result) => result.json())
-      .then((result) => setProjects(result))
-      .catch((err) => alert("error"));
+    // fetch(url)
+    //   .then((result) => result.json())
+    //   .then((result) => setProjects(result))
+    //   .catch((err) => alert("error"));
   }, []);
   return (
     <div className="project">
