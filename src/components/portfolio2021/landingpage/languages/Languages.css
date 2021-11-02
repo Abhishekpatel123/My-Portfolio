@@ -5,7 +5,7 @@
 .language .card_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 1rem;
   perspective: 500;
 }
 .language .card_container > * {
@@ -13,7 +13,7 @@
   padding: 1rem;
 }
 .lang_outer_card {
-    min-height: 200px;
+    min-height: 150px;
     border: 1px solid var(--_secondary);
     border-radius: 1rem;
     perspective: 1000px;
@@ -61,14 +61,14 @@
   backface-visibility: hidden;
 }
 
-.lan_inner_card h1 {
+.lan_inner_card h3 {
   font-weight: 800;
   color: white;
   transform: translateZ(0);
   transition: all .5s ease;
   text-transform: uppercase;
   font-family: verdana;
-  font-size: 2rem;
+  /* font-size: 1rem; */
   margin-bottom: 1rem;
   text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
     1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-import navData from "../../data/nav_data";
-import Logo from "../../utils/Logo/Logo";
+import navData from "../../../../data/nav_data";
+import Logo from "../../../../utils/Logo/Logo";
 import { useSelector } from "react-redux";
 
 function Navbar({ inactive }) {
@@ -59,7 +59,7 @@ function Navbar({ inactive }) {
   return (
     <header
       id="header"
-      className={`route-container ${inactive ? "inactive" : ""} ${
+      className={` ${
         navScroll ? "header-scroll" : "head"
       }`}
       ref={header}
@@ -89,6 +89,7 @@ function Navbar({ inactive }) {
             ))}
             {/* <button className="link join_me_btn">Join us</button> */}
           </nav>
+          {console.log(global ,'global ldf sfls   ')}
           <div className="socialLinksContainer">
             {global?.socialNetworks?.map((item, idx) => (
               <a className="social-icon" href={item.url} target="_blank">

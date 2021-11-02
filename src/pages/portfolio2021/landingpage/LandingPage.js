@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "./LandingPage.css";
-import Navbar from "../components/navbar/Navbar";
-import Banner from "../components/landingpage/banner/Banner";
-import Languages from "../components/landingpage/languages/Languages";
-import Footer from "../components/landingpage/footer/footer";
-import Contact from "../components/landingpage/contact/Contact";
-import Interest from "../components/landingpage/interest/Interest";
-import About from "../components/about/About";
-import Project from "../components/project/Project";
-import staticData from "../data/staticData";
-import Experience from "../components/experience/Experience";
+import React, { useEffect } from "react";
+import "./stylesheet.css";
+import {
+  About,
+  Banner,
+  Contact,
+  Experience,
+  Footer,
+  Interest,
+  Languages,
+  Navbar,
+  Project,
+} from "components/portfolio2021/landingpage";
+
+import staticData from "../../../data/staticData";
 
 function Home({ inactive }) {
   let data;

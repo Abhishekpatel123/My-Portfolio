@@ -4,8 +4,8 @@ import { FiSmartphone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrLocationPin } from "react-icons/gr";
 import { HiLocationMarker } from "react-icons/hi";
-import videoLogo from "../../../assets/video/_Logo.mp4";
-import Logo from "../../../utils/Logo/Logo";
+import videoLogo from "../../../../assets/video/_Logo.mp4";
+import Logo from "../../../../utils/Logo/Logo";
 import { useSelector } from "react-redux";
 
 function Footer() {
@@ -22,7 +22,6 @@ function Footer() {
           <div>
             <HiOutlineMail />
             <p>{global?.contactEmail}</p>
-            <p>enquiry@a.patel.com</p>
           </div>
           <div>
             <HiLocationMarker />
@@ -32,7 +31,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer">
-        <div className="container footer_content">
+        {/* <div className="container footer_content">
           <Logo />
           <div className="footer_links">
             <ul>
@@ -48,7 +47,7 @@ function Footer() {
             <HiLocationMarker />
             <HiLocationMarker />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="copyright">

@@ -5,6 +5,9 @@ import user from "../../assets/user.jpg";
 import MYImage from "../../assets/images/abhishek.jpeg";
 
 import MenuItem from "./MenuItem";
+import "./index.css";
+import { useSelector } from "react-redux";
+import { HiOutlineMail } from "react-icons/hi";
 
 /**
  * @author
@@ -44,14 +47,14 @@ export const menuItems = [
     to: `/aboutme`,
     iconClassName: "bi bi-flag",
   },
-  { name: "Design 2", to: `/design-2`, iconClassName: "bi bi-vector-pen" },
-  { name: "Design 3", to: `/design-3`, iconClassName: "bi bi-vector-pen" },
-  { name: "Design 4", to: `/design-4`, iconClassName: "bi bi-vector-pen" },
+  // { name: "Design 2", to: `/design-2`, iconClassName: "bi bi-vector-pen" },
+  // { name: "Design 3", to: `/design-3`, iconClassName: "bi bi-vector-pen" },
+  // { name: "Design 4", to: `/design-4`, iconClassName: "bi bi-vector-pen" },
 ];
 
 const SideMenu = ({ color, onCollapse }) => {
   const [inactive, setInactive] = useState(false);
-
+  const { global } = useSelector((state) => state);
   useEffect(() => {
     if (inactive) {
       removeActiveClassFromSubMenu();
@@ -89,11 +92,11 @@ const SideMenu = ({ color, onCollapse }) => {
   return (
     <div
       className={`side-menu ${inactive ? "inactive" : ""}`}
-      style={{ backgroundColor: color }}
+      style={{ backgroundColor: color, boxShadow: "2px 0px 8px 0px lightgray" }}
     >
       <div className="top-section">
         <div className="logo">
-          <img src={logo} alt="webscript" />
+          <h3>A</h3>
         </div>
         <div onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
           {inactive ? (
@@ -103,17 +106,30 @@ const SideMenu = ({ color, onCollapse }) => {
           )}
         </div>
       </div>
-
-      <div className="search-controller">
+      {/* <div className="search-controller">
         <button className="search-btn">
           <i class="bi bi-search"></i>
         </button>
 
         <input type="text" placeholder="search" />
-      </div>
+      </div> */}
 
       <div className="divider"></div>
 
+      <div className="social-links">
+        {global?.socialNetworks?.map((item) => {
+          return (
+            <div>
+              <img src={`http://localhost:1337${item.icon.url}`} />
+            </div>
+          );
+        })}
+        <div>
+          <HiOutlineMail fontSize="25px" />
+        </div>
+      </div>
+
+      <div className="divider"></div>
       <div className="main-menu">
         <ul>
           {menuItems.map((menuItem, index) => (

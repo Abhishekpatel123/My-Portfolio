@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import Heading from '../../utils/Heading/Heading'
+import Heading from '../../../../utils/Heading/Heading'
 import './About.css'
-import MYImage from '../../assets/images/abhishek.jpeg'
-import staticData from '../../data/staticData'
+import MYImage from '../../../../assets/images/abhishek.jpeg'
+import staticData from '../../../../data/staticData'
 
 function About() {
 

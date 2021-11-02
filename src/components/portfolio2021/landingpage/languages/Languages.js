@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import Heading from "../../../utils/Heading/Heading";
+import Heading from "../../../../utils/Heading/Heading";
 import Card from "./Card";
 import "./Languages.css";
-import staticData from "../../../data/staticData";
+import staticData from "../../../../data/staticData";
 
 function Languages() {
   const [skills, setSkills] = useState([]);
@@ -13,10 +13,10 @@ function Languages() {
     //   .catch((err) => {
     //     console.log(err, "error ");
     //   });
-    // fetch("http://localhost:1337/skills")
-    //   .then((result) => result.json())
-    //   .then((result) => setSkills(result))
-    //   .catch((err) => console.log(err, "er"));
+    fetch("http://localhost:1337/skills")
+      .then((result) => result.json())
+      .then((result) => setSkills(result))
+      .catch((err) => console.log(err, "er"));
   
     }, []);
 

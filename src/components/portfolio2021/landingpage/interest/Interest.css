@@ -22,7 +22,7 @@
   /* grid-column: span 2; */
   /* grid-row: span 2; */
   grid-area: medium;
-  background: url(../../../assets/images/coding.jpg);
+  background: url(../../../../assets/images/coding.jpg);
   background-color: rgba(0, 0, 0, 0.719);
   background-blend-mode: multiply;
   color: whitesmoke;
@@ -37,7 +37,7 @@
   /* grid-row: span 3; */
   grid-area: large;
 
-  background: url(../../../assets/images/robot.jpg);
+  background: url(../../../../assets/images/robot.jpg);
   background-color: rgba(31, 21, 7, 0.719);
   background-blend-mode: multiply;
   color: whitesmoke;
@@ -62,7 +62,7 @@
   /* grid-column: span 3; */
   /* grid-row: span 2; */
   grid-area: wide;
-  background: url(../../../assets/images/learning.jpg);
+  background: url(../../../../assets/images/learning.jpg);
   background-color: rgba(31, 21, 7, 0.719);
   background-blend-mode: multiply;
   color: whitesmoke;

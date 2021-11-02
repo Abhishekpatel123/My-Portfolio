@@ -1,7 +1,7 @@
 import React from 'react'
 import './Interest.css'
-import Heading from '../../../utils/Heading/Heading'
-import staticData from '../../../data/staticData';
+import Heading from '../../../../utils/Heading/Heading'
+import staticData from '../../../../data/staticData';
 
 function Interest() {
     return (

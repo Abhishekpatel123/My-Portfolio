@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import staticData from "../../../data/staticData";
+import staticData from "../../../../data/staticData";
+
 import "./Banner.css";
 
 export default function Banner() {
