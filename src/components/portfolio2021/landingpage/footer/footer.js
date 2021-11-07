@@ -9,12 +9,12 @@ import Logo from "../../../../utils/Logo/Logo";
 import { useSelector } from "react-redux";
 
 function Footer() {
-  const global = useSelector((state) => state.global);
-  
+  const { global } = useSelector((state) => state.global);
+
   return (
     <>
       <div className="social">
-        <div className="container social_content">
+        {/* <div className="container social_content">
           <div>
             <FiSmartphone />
             <p>+91 871976xxxx</p>
@@ -28,7 +28,7 @@ function Footer() {
             <p>No 5, North street ,</p>
             <p> Indore ,Madhya pradesh ,india </p>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="footer">
         {/* <div className="container footer_content">

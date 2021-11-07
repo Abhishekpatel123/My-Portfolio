@@ -5,5 +5,5 @@
 }
 .heading > h1{
     color: var(--_secondary);
-    border-bottom: 1px solid var(--_secondary);
+    /* border-bottom: 1px solid var(--_secondary); */
 }

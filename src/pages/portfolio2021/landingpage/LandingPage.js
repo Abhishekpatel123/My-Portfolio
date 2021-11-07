@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Fade } from "react-reveal";
 import "./stylesheet.css";
 import {
   About,
@@ -11,8 +12,7 @@ import {
   Navbar,
   Project,
 } from "components/portfolio2021/landingpage";
-
-import staticData from "../../../data/staticData";
+import staticData from "data/staticData";
 
 function Home({ inactive }) {
   let data;
@@ -50,22 +50,24 @@ function Home({ inactive }) {
         <Banner />
 
         <div className="data_in_number">
-          <div className="container">
-            <div className="content">
-              <hr />
-              <div className="data_container">
-                {staticData.data_in_number.map(({ number, title }, idx) => (
-                  <div>
-                    <h1 style={{ textAlign: "center", margin: ".5rem 0" }}>
-                      {number}
-                    </h1>
-                    <h5 style={{ color: "gray" }}>{title}</h5>
-                  </div>
-                ))}
+          <Fade>
+            <div className="container">
+              <div className="content">
+                <hr />
+                <div className="data_container">
+                  {staticData.data_in_number.map(({ number, title }, idx) => (
+                    <div>
+                      <h2 style={{ textAlign: "center", margin: ".5rem 0" }}>
+                        {number}
+                      </h2>
+                      <h5 style={{ color: "gray" }}>{title}</h5>
+                    </div>
+                  ))}
+                </div>
+                <hr />
               </div>
-              <hr />
             </div>
-          </div>
+          </Fade>
         </div>
         <About />
         <Languages />

@@ -54,7 +54,7 @@ export const menuItems = [
 
 const SideMenu = ({ color, onCollapse }) => {
   const [inactive, setInactive] = useState(false);
-  const { global } = useSelector((state) => state);
+  const { global } = useSelector((state) => state.global);
   useEffect(() => {
     if (inactive) {
       removeActiveClassFromSubMenu();
@@ -115,7 +115,7 @@ const SideMenu = ({ color, onCollapse }) => {
       </div> */}
 
       <div className="divider"></div>
-
+{/* 
       <div className="social-links">
         {global?.socialNetworks?.map((item) => {
           return (
@@ -127,7 +127,7 @@ const SideMenu = ({ color, onCollapse }) => {
         <div>
           <HiOutlineMail fontSize="25px" />
         </div>
-      </div>
+      </div> */}
 
       <div className="divider"></div>
       <div className="main-menu">

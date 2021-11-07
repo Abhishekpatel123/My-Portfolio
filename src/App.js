@@ -11,9 +11,8 @@ import Dashboard from "./pages/common/dashboard/Dashboard";
 
 function App() {
   const [inactive, setInactive] = useState(false);
-  // const [color, setColor] = useState("#a210da");
   const dispatch = useDispatch();
-  const { color } = useSelector((state) => state);
+  const { color } = useSelector((state) => state.global);
   useEffect(() => {
     const URL = "http://localhost:1337/global";
     loadData(URL).then((respose) => {
@@ -90,7 +89,7 @@ function App() {
         }}
       />
       <div
-        style={{ padding: "0px 40px 15px 40px" }}
+        style={{ padding: "0px 0px 15px 40px" }}
         className={`route-container ${inactive ? "inactive" : ""}`}
       >
         <Switch>

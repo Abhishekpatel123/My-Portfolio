@@ -13,9 +13,9 @@ export default [
 
     },
     {
-        id: "language222",
-        to: "language",
-        name: "Experise",
+        id: "skill222",
+        to: "skill",
+        name: "Skills",
         offset: "10px"
 
     },

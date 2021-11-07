@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Heading from "../../../../utils/Heading/Heading";
+import Heading from "utils/Heading/Heading";
 import "./Project.css";
-import staticData from "../../../../data/staticData";
-
+import staticData from "data/staticData";
+import SubHeading from "helpers/SubHeading";
+import { useDispatch, useSelector } from "react-redux";
+import { setProjects } from "store/portfolio2021";
 function Project() {
-  const [projects, setProjects] = useState([]);
+  const { projects } = useSelector((state) => state.portfolio2021);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const url = "http://localhost:1337/projects";
     fetch(url)
       .then((result) => result.json())
-      .then((result) => setProjects(result))
+      .then((result) => dispatch(setProjects({ projects: result })))
       .catch((err) => alert("error"));
   }, []);
   return (
-    <div className="project">
+    <div name="project" className="project">
       <div className="container content">
         <Heading heading="My Projects" />
         <div className="card_container">
@@ -28,6 +31,7 @@ function Project() {
               </div>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
+              <SubHeading title="USED STACK" />
               <div style={{ display: "flex", margin: "10px 0" }}>
                 {item?.tech_usages?.map((skill, idx) => (
                   <div
@@ -61,7 +65,9 @@ function Project() {
                 {/* <a target="_blank" href={item.github_url}>
                   <button>github</button>
                 </a> */}
-                <span style={{ fontSize: 12 }}>{item?.updated_at?.split("T")[0]}</span>
+                <span style={{ fontSize: 12 }}>
+                  {item?.updated_at?.split("T")[0]}
+                </span>
               </div>
             </div>
           ))}

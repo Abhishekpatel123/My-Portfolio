@@ -4,8 +4,6 @@
 }
 .interest_content {
   display: grid;
-  /* grid-template-columns: repeat(5, 1fr); */
-  /* grid-template-rows: repeat(6, 1fr); */
   grid-template-areas:
     "medium medium large large large"
     "medium medium large large large"
@@ -13,14 +11,11 @@
     "medium2 medium2 small tall tall"
     "wide wide wide tall tall"
     "wide wide wide tall tall";
-  /* grid-gap: 1rem; */
   min-height: 85vh;
   margin: 2rem 0;
 }
 
 .interest_content .medium {
-  /* grid-column: span 2; */
-  /* grid-row: span 2; */
   grid-area: medium;
   background: url(../../../../assets/images/coding.jpg);
   background-color: rgba(0, 0, 0, 0.719);
@@ -33,8 +28,6 @@
   grid-area: medium2;
 }
 .interest_content .large {
-  /* grid-column: span 3; */
-  /* grid-row: span 3; */
   grid-area: large;
 
   background: url(../../../../assets/images/robot.jpg);
@@ -47,20 +40,13 @@
 
 .interest_content .small {
   grid-area: small;
-
-  /* grid-column: span 1; */
-  /* grid-row: span 1; */
 }
 
 .interest_content .tall {
   grid-area: tall;
-  /* grid-column: span 2; */
-  /* grid-row: span 3; */
 }
 
 .interest_content .wide {
-  /* grid-column: span 3; */
-  /* grid-row: span 2; */
   grid-area: wide;
   background: url(../../../../assets/images/learning.jpg);
   background-color: rgba(31, 21, 7, 0.719);

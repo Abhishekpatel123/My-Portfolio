@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-import navData from "../../../../data/nav_data";
-import Logo from "../../../../utils/Logo/Logo";
+import navData from "data/nav_data";
 import { useSelector } from "react-redux";
 
 function Navbar({ inactive }) {
@@ -10,32 +9,12 @@ function Navbar({ inactive }) {
   const nav = useRef();
   const [navScroll, setNavScroll] = useState(false);
   const [open, setOpen] = useState(false);
-  const global = useSelector((state) => state.global);
-
-  // function scrollFun() {
-  //     console.log(window.screenY, window.pageYOffset)
-
-  //     if (window.pageYOffset > 5000) {
-  //         setNavScroll(true)
-  //         // console.log(window.screenY)
-  //         // header.current.classList.add("header-scroll")
-  //     } else {
-  //         setNavScroll(true)
-  //     }
-  //     // else header.current.classList.remove("header-scroll")
-  // }
-  // useEffect(() => {
-  //     window.addEventListener('scroll', scrollFun);
-  //     return () => {
-  //         // return window.removeEventListener('scroll', scrollFun)
-  //     }
-  // }, [])
+  const { global } = useSelector((state) => state.global);
 
   const observer = new IntersectionObserver(
     (entries, observe) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
-          // after entry we want to change navbar style
           header?.current?.classList.add("header-scroll");
         } else {
           header?.current?.classList.remove("header-scroll");
@@ -44,6 +23,7 @@ function Navbar({ inactive }) {
     },
     { rootMargin: "-200px 0px 0px 0px" }
   );
+
   useEffect(() => {
     const banner = document.querySelector(".banner");
     observer.observe(banner);
@@ -59,19 +39,14 @@ function Navbar({ inactive }) {
   return (
     <header
       id="header"
-      className={` ${
-        navScroll ? "header-scroll" : "head"
-      }`}
+      className={` ${navScroll ? "header-scroll" : "head"}`}
       ref={header}
     >
       <div className="container">
         <div className="content">
-          {/* <Logo /> */}
-
           <div className="bar" onClick={(e) => openSidebar(e)}>
             <span className={open ? "line" : null}></span>
             <span className={open ? "line_reverse" : null}></span>
-            {/* <span></span> */}
           </div>
           <nav ref={nav} className="nav_mobile">
             {navData.map((link) => (
@@ -82,18 +57,18 @@ function Navbar({ inactive }) {
                 className="link"
                 key={link.id}
                 to={link.to}
-                // offset={link.offset}
+                offset={-70}
               >
                 {link.name}
               </Link>
             ))}
-            {/* <button className="link join_me_btn">Join us</button> */}
           </nav>
-          {console.log(global ,'global ldf sfls   ')}
           <div className="socialLinksContainer">
             {global?.socialNetworks?.map((item, idx) => (
               <a className="social-icon" href={item.url} target="_blank">
                 <img
+                  width={15}
+                  height={15}
                   key={`socail-icon${idx}`}
                   src={`http://localhost:1337${item.icon.url}`}
                 />

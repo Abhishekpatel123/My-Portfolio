@@ -1,6 +1,5 @@
 const initialState = {
-  global: { hello : "fjslfdsjk"},
-  color : "#BA5370"
+  projects: [],
 };
 
 export default initialState;
