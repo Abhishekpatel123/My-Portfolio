@@ -9,7 +9,8 @@
 }
 .data_in_number {
     padding: 2rem 1.5rem;
-    background: var(--_secondary_gradient);
+    /* background: var(--_secondary_gradient); */
+    background: linear-gradient(to right, #fdb99b, #cf8bf3,#a770ef );
     margin: 4rem 0;
     box-shadow: 0 0 5px gray;
     opacity: 0;

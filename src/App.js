@@ -8,11 +8,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { setColor, setGlobal } from "./store/global";
 import { About } from "components/portfolio2021/landingpage";
 import Dashboard from "./pages/common/dashboard/Dashboard";
+import { Motivation } from "pages/common/motivation";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  main_content: {
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "0px !important",
+      padding: "0px !important",
+    },
+  },
+}));
 
 function App() {
   const [inactive, setInactive] = useState(false);
   const dispatch = useDispatch();
   const { color } = useSelector((state) => state.global);
+  const classes = useStyles();
   useEffect(() => {
     const URL = "http://localhost:1337/global";
     loadData(URL).then((respose) => {
@@ -90,7 +102,9 @@ function App() {
       />
       <div
         style={{ padding: "0px 0px 15px 40px" }}
-        className={`route-container ${inactive ? "inactive" : ""}`}
+        className={`route-container ${inactive ? "inactive" : ""} ${
+          classes.main_content
+        }`}
       >
         <Switch>
           <Route
@@ -146,10 +160,9 @@ function App() {
             )}
           />
           <Route exact path="/aboutme" component={() => <About />} />
+          <Route exact path="/motivation" component={() => <Motivation />} />
+
           <Route path="/admin" component={Admin} />
-          {/* <Route path="/" >
-        <Redirect to="/v1" />
-      </Route> */}
         </Switch>
       </div>
     </div>

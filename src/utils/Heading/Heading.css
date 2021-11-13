@@ -4,6 +4,6 @@
     margin: 1rem 0;
 }
 .heading > h1{
-    color: var(--_secondary);
+    /* color: var(--_secondary); */
     /* border-bottom: 1px solid var(--_secondary); */
 }

@@ -2,12 +2,12 @@ export default {
   banner: {
     title: "Hi there 👋, my name is Abhishek Patel",
     skills: [
-      "APP DEVELOPER",
-      "MERN STACK DEVELOPER",
-      "PYTHON DEVELOPER (LEARNING)",
+      " APP DEVELOPER",
+      " MERN STACK DEVELOPER",
+      " PYTHON DEVELOPER (LEARNING)",
     ],
     description:
-      "I'm Abhishek Patel from India , and I am a Mern Stack Developer . I really enjoy lerarning languages and frameworks like React js , React Native , Express js etc also i am goot in probleming solving skill",
+      "I'm Abhishek Patel from India , and I am a Mern Stack Developer . I really enjoy lerarning languages and frameworks like React js , React Native , Express js etc also i am good in problem solving skill",
   },
   data_in_number: [
     {

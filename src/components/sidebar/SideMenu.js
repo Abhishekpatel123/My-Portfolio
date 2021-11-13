@@ -8,11 +8,9 @@ import MenuItem from "./MenuItem";
 import "./index.css";
 import { useSelector } from "react-redux";
 import { HiOutlineMail } from "react-icons/hi";
-
-/**
- * @author
- * @function SideMenu
- **/
+import { useMediaQuery } from "@mui/material";
+import MobileMenuItem from "./MobileMenuItem";
+import { Menu, MenuOpen } from "@mui/icons-material";
 
 // added more menuItems for testing
 export const menuItems = [
@@ -55,6 +53,8 @@ export const menuItems = [
 const SideMenu = ({ color, onCollapse }) => {
   const [inactive, setInactive] = useState(false);
   const { global } = useSelector((state) => state.global);
+  const matches = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
   useEffect(() => {
     if (inactive) {
       removeActiveClassFromSubMenu();
@@ -89,7 +89,7 @@ const SideMenu = ({ color, onCollapse }) => {
     });
   }, []);
 
-  return (
+  return !matches ? (
     <div
       className={`side-menu ${inactive ? "inactive" : ""}`}
       style={{ backgroundColor: color, boxShadow: "2px 0px 8px 0px lightgray" }}
@@ -106,28 +106,8 @@ const SideMenu = ({ color, onCollapse }) => {
           )}
         </div>
       </div>
-      {/* <div className="search-controller">
-        <button className="search-btn">
-          <i class="bi bi-search"></i>
-        </button>
-
-        <input type="text" placeholder="search" />
-      </div> */}
 
       <div className="divider"></div>
-{/* 
-      <div className="social-links">
-        {global?.socialNetworks?.map((item) => {
-          return (
-            <div>
-              <img src={`http://localhost:1337${item.icon.url}`} />
-            </div>
-          );
-        })}
-        <div>
-          <HiOutlineMail fontSize="25px" />
-        </div>
-      </div> */}
 
       <div className="divider"></div>
       <div className="main-menu">
@@ -147,27 +127,57 @@ const SideMenu = ({ color, onCollapse }) => {
               }}
             />
           ))}
+        </ul>
+      </div>
 
-          {/* <li>
-            <a className="menu-item">
-              <div className="menu-icon">
-                <i class="bi bi-speedometer2"></i>
-              </div>
-              <span>Dashboard</span>
-            </a>
-          </li>
-          <MenuItem
-            name={"Content"}
-            subMenus={[{ name: "Courses" }, { name: "Videos" }]}
-          />
-          <li>
-            <a className="menu-item">
-              <div className="menu-icon">
-                <i class="bi bi-vector-pen"></i>
-              </div>
-              <span>Design</span>
-            </a>
-          </li> */}
+      <div className="side-menu-footer">
+        <div className="avatar">
+          <img src={MYImage} alt="my profile" />
+        </div>
+        <div className="user-info">
+          <h5>Abhishek Patel</h5>
+          <p>abhipatel8719@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div
+      className={`mobile-side-menu side-menu ${inactive ? "inactive" : ""}`}
+      style={{ backgroundColor: color, boxShadow: "2px 0px 8px 0px lightgray" }}
+    >
+      <div className="top-section">
+        <div className="logo">
+          <h3>A</h3>
+        </div>
+        <div onClick={() => setInactive(!inactive)} className="toggle-menu-btn">
+          {inactive ? (
+            <Menu color="primary" fontSize="large" />
+          ) : (
+            <MenuOpen fontSize="large" />
+          )}
+        </div>
+      </div>
+
+      <div className="divider"></div>
+
+      <div className="divider"></div>
+      <div className="main-menu">
+        <ul>
+          {menuItems.map((menuItem, index) => (
+            <MobileMenuItem
+              key={index}
+              name={menuItem.name}
+              exact={menuItem.exact}
+              to={menuItem.to}
+              subMenus={menuItem.subMenus || []}
+              iconClassName={menuItem.iconClassName}
+              onClick={(e) => {
+                if (inactive) {
+                  setInactive(false);
+                }
+              }}
+            />
+          ))}
         </ul>
       </div>
 

@@ -49,8 +49,9 @@ function Navbar({ inactive }) {
             <span className={open ? "line_reverse" : null}></span>
           </div>
           <nav ref={nav} className="nav_mobile">
-            {navData.map((link) => (
+            {navData.map((link, idx) => (
               <Link
+                key={idx}
                 activeClass="active"
                 spy={true}
                 smooth={true}
@@ -63,7 +64,7 @@ function Navbar({ inactive }) {
               </Link>
             ))}
           </nav>
-          <div className="socialLinksContainer">
+          {/* <div className="socialLinksContainer">
             {global?.socialNetworks?.map((item, idx) => (
               <a className="social-icon" href={item.url} target="_blank">
                 <img
@@ -74,7 +75,7 @@ function Navbar({ inactive }) {
                 />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

@@ -45,11 +45,11 @@ function Home({ inactive }) {
 
   return (
     <div>
-      <Navbar inactive={inactive} />
+      {/* <Navbar inactive={inactive} /> */}
       <main className={`allContent container `}>
         <Banner />
 
-        <div className="data_in_number">
+        <div className="data_in_number"  >
           <Fade>
             <div className="container">
               <div className="content">

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import ContactIllustration from "../../../../assets/images/contact";
 function Contact() {
   const [input, setInput] = useState({
     name: "",
@@ -17,12 +16,12 @@ function Contact() {
       method: "POST",
       body: JSON.stringify(input),
       headers: {
-      "Content-Type": "application/json",
+        "Content-Type": "application/json",
       },
     })
       .then((result) => result.json())
       .then((result) => {
-          console.log(result , 'result')
+        console.log(result, "result");
         alert("Succesfully submitted feedback.");
       })
       .catch((err) => console.log(err, "err"));
@@ -31,9 +30,6 @@ function Contact() {
   return (
     <div name="contact" className="contact">
       <div className="container contact_content">
-        <ContactIllustration width="100%" height="100%" />
-        {/* <div className="left"> */}
-        {/* </div> */}
         <div className="right">
           <h3 className="sub_heading my-12">Contact us</h3>
           <h1 className="heading my-12">Never hesitate to contact </h1>
