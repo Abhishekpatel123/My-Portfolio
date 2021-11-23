@@ -2,7 +2,7 @@ import axios from "axios";
 
 const instance = () => {
   return axios.create({
-    baseURL: `${process.env.SERVER_URL}`,
+    baseURL: `https://portfolio-backend-12345.herokuapp.com`,
   });
 };
 

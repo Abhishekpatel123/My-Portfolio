@@ -26,7 +26,7 @@ function App() {
   const { color } = useSelector((state) => state.global);
   const classes = useStyles();
   useEffect(() => {
-    const URL = `${process.env.SERVER_URL}/global`;
+    const URL = `https://portfolio-backend-12345.herokuapp.com/global`;
     loadData(URL).then((respose) => {
       dispatch(setGlobal(respose));
     });

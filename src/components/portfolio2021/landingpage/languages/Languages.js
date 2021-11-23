@@ -17,7 +17,7 @@ function Languages() {
     //   .catch((err) => {
     //     console.log(err, "error ");
     //   });
-    fetch(`${process.env.SERVER_URL}/skills`)
+    fetch(`https://portfolio-backend-12345.herokuapp.com/skills`)
       .then((result) => result.json())
       .then((result) => setSkills(result))
       .catch((err) => console.log(err, "er"));
