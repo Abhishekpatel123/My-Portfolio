@@ -17,7 +17,7 @@ function Languages() {
     //   .catch((err) => {
     //     console.log(err, "error ");
     //   });
-    fetch("http://localhost:1337/skills")
+    fetch(`${process.env.SERVER_URL}/skills`)
       .then((result) => result.json())
       .then((result) => setSkills(result))
       .catch((err) => console.log(err, "er"));

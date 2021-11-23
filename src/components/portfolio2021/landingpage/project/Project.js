@@ -10,7 +10,7 @@ function Project() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = "http://localhost:1337/projects";
+    const url = `${process.env.SERVER_URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => dispatch(setProjects({ projects: result })))
@@ -25,7 +25,7 @@ function Project() {
             <div className="card" key={idx}>
               <div className="image_container">
                 <img
-                  src={`http://localhost:1337${item.coverImage.url}`}
+                  src={`process.env.SERVER_URL${item.coverImage.url}`}
                   alt="project"
                 />
               </div>

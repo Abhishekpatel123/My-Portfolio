@@ -25,7 +25,7 @@ const Dashboard = () => {
   const [values, setValues] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:1337/projects";
+    const url = `${process.env.SERVER_URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => {

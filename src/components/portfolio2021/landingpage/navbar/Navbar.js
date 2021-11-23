@@ -71,7 +71,7 @@ function Navbar({ inactive }) {
                   width={15}
                   height={15}
                   key={`socail-icon${idx}`}
-                  src={`http://localhost:1337${item.icon.url}`}
+                  src={`process.env.SERVER_URL${item.icon.url}`}
                 />
               </a>
             ))}

@@ -26,7 +26,7 @@ function App() {
   const { color } = useSelector((state) => state.global);
   const classes = useStyles();
   useEffect(() => {
-    const URL = "http://localhost:1337/global";
+    const URL = `${process.env.SERVER_URL}/global`;
     loadData(URL).then((respose) => {
       dispatch(setGlobal(respose));
     });
