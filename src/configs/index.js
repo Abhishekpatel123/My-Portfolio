@@ -5,7 +5,7 @@ const {
 } = process.env;
 
 let URL = "http://localhost:1337";
-if (NODE_ENV === "production") {
+if (NODE_ENV !== "production") {
   URL = "https://portfolio-backend-12345.herokuapp.com";
 }
 console.log(URL , 'url')

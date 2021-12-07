@@ -65,12 +65,12 @@ function AboutMe() {
         </Grid>
 
         {/* skills */}
-        <Grid item xs={12} md={6} style={{ marginTop: "2rem" }}>
+        <Grid item xs={12} md={12} style={{ marginTop: "2rem" }}>
           <Skills />
         </Grid>
 
         {/* projects */}
-        <Grid item xs={12} md={6} style={{ marginTop: "2rem" }}>
+        <Grid item xs={12}  style={{ marginTop: "2rem" }}>
           <Projects />
         </Grid>
 
