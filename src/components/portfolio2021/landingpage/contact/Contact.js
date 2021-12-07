@@ -1,3 +1,4 @@
+import URL from "configs";
 import React, { useState } from "react";
 import "./Contact.css";
 function Contact() {
@@ -11,8 +12,7 @@ function Contact() {
     setInput((pre) => ({ ...pre, [e.target.name]: e.target.value }));
 
   const handleSubmit = () => {
-    const URL = `${process.env.URL}/feedbacks`;
-    fetch(URL, {
+    fetch(`${URL}/feedbacks`, {
       method: "POST",
       body: JSON.stringify(input),
       headers: {

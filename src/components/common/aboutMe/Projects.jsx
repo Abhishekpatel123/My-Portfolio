@@ -2,9 +2,10 @@ import React from "react";
 import Wrapper from "./Wrapper";
 import { Box, Typography, Chip, Grid } from "@mui/material";
 import { useQuery } from "react-query";
+import URL from "configs";
 
 const getProjects = () => {
-  const url = `${process.env.URL}/projects`;
+  const url = `${URL}/projects`;
   return fetch(url).then((result) => result.json());
 };
 

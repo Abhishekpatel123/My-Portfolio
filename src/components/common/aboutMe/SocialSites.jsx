@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles";
 import React from "react";
 import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
+import URL from "configs";
 // import loadData from "services/loadData";
 // import { useQuery } from "react-query";
 
@@ -20,7 +21,7 @@ function SocialSites() {
   const classes = useStyles();
   const { global } = useSelector((state) => state.global);
   console.log(global, "global");
-  // const URL = `${process.env.URL}/global`;
+  // const URL = `${URL}/global`;
   // const { data, isLoading } = useQuery("global", loadData(URL));
   // useEffect(() => !isLoading && dispatch(setGlobal(data)), [isLoading]);
 
@@ -54,7 +55,7 @@ function SocialSites() {
                 <img
                   width="20px"
                   height="20px"
-                  src={`${process.env.URL}` + icon.url}
+                  src={`${URL}` + icon.url}
                 />
                 <h6 style={{ marginLeft: 10 }}>
                   <a style={{ letterSpacing: 2 }} href={url} target="_blank">

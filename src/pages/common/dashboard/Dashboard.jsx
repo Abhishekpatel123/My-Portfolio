@@ -18,6 +18,7 @@ import runningPng from "./running.png";
 import pendingPng from "./pending.png";
 import totalPng from "./total.png";
 import CommingSoon from "helpers/CommingSoon";
+import URL from "configs";
 // import { useQuery } from "react-query";
 // import { PieChart, Pie, Tooltip, Cell, Legend } from "recharts";
 // import { Bar } from "react-chartjs-2";
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const getProjects = () => {
-  const url = `${process.env.URL}/projects`;
+  const url = `${URL}/projects`;
   return fetch(url).then((result) => result.json());
 };
 
@@ -74,7 +75,7 @@ const Dashboard = () => {
     // console.log(valuesArray, "value array ");
     // setValues(valuesArray);
 
-    const url = `${process.env.URL}/projects`;
+    const url = `${URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => {

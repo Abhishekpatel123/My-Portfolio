@@ -5,12 +5,13 @@ import staticData from "data/staticData";
 import SubHeading from "helpers/SubHeading";
 import { useDispatch, useSelector } from "react-redux";
 import { setProjects } from "store/portfolio2021";
+import URL from "configs";
 function Project() {
   const { projects } = useSelector((state) => state.portfolio2021);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = `${process.env.URL}/projects`;
+    const url = `${URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => dispatch(setProjects({ projects: result })))

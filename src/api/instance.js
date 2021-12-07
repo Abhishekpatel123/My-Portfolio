@@ -1,8 +1,9 @@
 import axios from "axios";
+import URL from "configs";
 
 const instance = () => {
   return axios.create({
-    baseURL: `${process.env.URL}`,
+    baseURL: `${URL}`,
   });
 };
 

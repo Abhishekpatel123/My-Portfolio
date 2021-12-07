@@ -13,6 +13,7 @@ import AboutMe from "pages/common/aboutMe/AboutMe";
 import { ColorPicker, CommingSoon } from "helpers";
 // import loadData from "services/loadData";
 import { useQuery } from "react-query";
+import URL from "configs";
 
 const useStyles = makeStyles((theme) => ({
   main_content: {
@@ -23,8 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const URL = `${process.env.URL}/global`;
-const loadData = () => fetch(URL).then((result) => result.json());
+const loadData = () => fetch(`${URL}/global`).then((result) => result.json());
 
 function App() {
   // sidebar toggle state
