@@ -11,7 +11,7 @@ function Contact() {
     setInput((pre) => ({ ...pre, [e.target.name]: e.target.value }));
 
   const handleSubmit = () => {
-    const URL = `https://portfolio-backend-12345.herokuapp.com/feedbacks`;
+    const URL = `http://localhost:1337/feedbacks`;
     fetch(URL, {
       method: "POST",
       body: JSON.stringify(input),

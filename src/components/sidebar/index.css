@@ -1,5 +1,5 @@
 /* --------------------------- sidebar css ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* font-family: 'Roboto Mono', monospace; */
 * {
@@ -12,10 +12,6 @@ ul {
 }
 li {
   list-style: none;
-}
-body {
-  background-color: #eee;
-  font-family: "Open Sans", sans-serif;
 }
 
 /* width */
@@ -49,9 +45,11 @@ body {
   width: 300px;
   height: 100%;
   box-sizing: border-box;
-  padding: 30px 20px;
   transition: width 0.2s ease-in;
   z-index: 100;
+}
+.side-menu-inner {
+  padding: 30px 10px;
 }
 
 .side-menu.inactive {
@@ -62,9 +60,9 @@ body {
   transform: translateX(-78px);
 }
 
-.side-menu .top-section {
+/* .side-menu .top-section {
   position: relative;
-}
+} */
 
 .side-menu .top-section .logo {
   width: 40px;
@@ -90,17 +88,21 @@ body {
   max-height: 100%;
 }
 
-.side-menu .top-section .toggle-menu-btn {
-  color: #2e2222;
-  font-size: 20px;
+.toggle-menu-btn {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -30px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-.side-menu.inactive .top-section .toggle-menu-btn {
+.side-menu.inactive .toggle-menu-btn {
   right: -50px;
 }
 
@@ -247,13 +249,27 @@ body {
   color: #fff;
   position: absolute;
   opacity: 1;
+  padding-left: 4px;
   transition: opacity 0.2s ease-in;
 }
-
-.side-menu.inactive .side-menu-footer .user-info {
+.side-menu .user-info {
   opacity: 1;
+  transition: opacity 0.2s ease-in;
+  overflow: hidden;
+}
+.side-menu.inactive .user-info {
+  opacity: 0;
   width: 0;
   height: 0;
+  padding-left: 0 !important;
+  overflow: hidden;
+}
+
+.side-menu.inactive .list-item-text {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding-left: 0 !important;
   overflow: hidden;
 }
 
@@ -271,7 +287,7 @@ body {
   border-radius: 1px;
   background: #333;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .route-container {

@@ -7,19 +7,9 @@ import {
   Box,
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
-import Heading from "utils/Heading/Heading";
-
-const motivationData = [
-    {
-        motivation : "Do everything you have to do, but not with ego, not with lust, not with envy but with love, compassion, humility, and devotion.",
-        writer : "Lord Krishna"
-    },
-    {
-        motivation : "Itne janmo ko baad hame insaan ka janam milta hai to fir us janam to hame normal life mai jeene ka kya fayada.",
-        writer : ""
-    }
-]
+import React, { useState } from "react";
+import motivaitions from "json/motivations.json";
+// import Heading from "utils/Heading/Heading";
 
 const useStyles = makeStyles((theme) => ({
   description: {
@@ -27,22 +17,22 @@ const useStyles = makeStyles((theme) => ({
     "& span": {
       fontSize: 20,
       fontWeight: 900,
-      color : theme.palette.primary.dark
+      color: theme.palette.primary.dark,
     },
   },
 }));
 
 function Motivation() {
+  // const [motivations, setMotivations] = useState(motivationData);
   const classes = useStyles();
   return (
     <Box py={4} pr={2}>
       {/* heading  */}
       <Typography variant="h4">MOTIVATION</Typography>
       {/* card  */}
-
       <Grid container spacing={2} style={{ marginTop: 10, marginRight: 10 }}>
-        {motivationData.map(({motivation , writer}) => (
-          <Grid item xs={12} sm={4}>
+        {motivaitions?.map(({ motivation, writer }) => (
+          <Grid item xs={12} key={motivation} sm={4}>
             <Card>
               <CardContent>
                 <Typography
@@ -63,7 +53,6 @@ function Motivation() {
                 >
                   – {writer}
                 </Typography>
-                {/* <Button>– Lord Krishna</Button> */}
               </CardActionArea>
             </Card>
           </Grid>

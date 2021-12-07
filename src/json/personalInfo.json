@@ -1,0 +1,113 @@
+{
+    "id": 1,
+    "siteName": "Portfolio",
+    "contactEmail": "abhipatel8719@gmail.com",
+    "siteLanguage": "en",
+    "created_at": "2021-10-23T22:37:08.512Z",
+    "updated_at": "2021-10-28T19:24:25.009Z",
+    "socialNetworks": [
+        {
+            "id": 1,
+            "title": "Twitter",
+            "url": "#",
+            "icon": {
+                "id": 4,
+                "name": "twitter.svg",
+                "alternativeText": null,
+                "caption": null,
+                "width": 24,
+                "height": 24,
+                "formats": null,
+                "hash": "twitter_9d34b3eb6a",
+                "ext": ".svg",
+                "mime": "image/svg+xml",
+                "size": 0.41,
+                "url": "/uploads/twitter_9d34b3eb6a.svg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "created_at": "2021-10-23T22:37:16.969Z",
+                "updated_at": "2021-10-23T22:37:16.969Z"
+            }
+        },
+        {
+            "id": 2,
+            "title": "LinkedIn",
+            "url": "https://www.linkedin.com/in/abhishek-patel-6169581a3",
+            "icon": {
+                "id": 1,
+                "name": "linkedin.svg",
+                "alternativeText": null,
+                "caption": null,
+                "width": 24,
+                "height": 24,
+                "formats": null,
+                "hash": "linkedin_07bd0f4066",
+                "ext": ".svg",
+                "mime": "image/svg+xml",
+                "size": 0.4,
+                "url": "/uploads/linkedin_07bd0f4066.svg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "created_at": "2021-10-23T22:37:15.861Z",
+                "updated_at": "2021-10-23T22:37:15.861Z"
+            }
+        },
+        {
+            "id": 3,
+            "title": "Instagram",
+            "url": "https://www.instagram.com/abhishekpatel7339",
+            "icon": {
+                "id": 2,
+                "name": "instagram.svg",
+                "alternativeText": null,
+                "caption": null,
+                "width": 24,
+                "height": 24,
+                "formats": null,
+                "hash": "instagram_ec42867ff5",
+                "ext": ".svg",
+                "mime": "image/svg+xml",
+                "size": 0.4,
+                "url": "/uploads/instagram_ec42867ff5.svg",
+                "previewUrl": null,
+                "provider": "local",
+                "provider_metadata": null,
+                "created_at": "2021-10-23T22:37:16.596Z",
+                "updated_at": "2021-10-23T22:37:16.596Z"
+            }
+        }
+    ],
+    "favicon": {
+        "id": 11,
+        "name": "favicon.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 245,
+        "height": 245,
+        "formats": {
+            "thumbnail": {
+                "name": "thumbnail_favicon.png",
+                "hash": "thumbnail_favicon_70795cf254",
+                "ext": ".png",
+                "mime": "image/png",
+                "width": 156,
+                "height": 156,
+                "size": 12.29,
+                "path": null,
+                "url": "/uploads/thumbnail_favicon_70795cf254.png"
+            }
+        },
+        "hash": "favicon_70795cf254",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 6.76,
+        "url": "/uploads/favicon_70795cf254.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-10-23T22:37:18.431Z",
+        "updated_at": "2021-10-23T22:37:18.431Z"
+    }
+}

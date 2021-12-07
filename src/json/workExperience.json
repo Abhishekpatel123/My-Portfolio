@@ -1,0 +1,38 @@
+[
+    {
+        "company": "Doof Reaserach Private Limited.",
+        "timeInterval": {
+            "start": "Jan 10, 2021",
+            "end": "Present"
+        },
+        "skill": "MERN STACK DEVELOPER",
+        "status": "Active"
+    },
+    {
+        "company": "Auric Touch LLP",
+        "timeInterval": {
+            "start": "Jan 10, 2021",
+            "end": "Present"
+        },
+        "skill": "MERN STACK DEVELOPER",
+        "status": "Completed"
+    },
+    {
+        "company": "Solera Life Science Private Limited",
+        "timeInterval": {
+            "start": "Jan 10, 2021",
+            "end": "Present"
+        },
+        "skill": "MERN STACK DEVELOPER",
+        "status": "Completed"
+    },
+    {
+        "company": "Dr. Goyal's Dental and TMJ Care.",
+        "timeInterval": {
+            "start": "Jan 10, 2021",
+            "end": "Present"
+        },
+        "skill": "MERN STACK DEVELOPER",
+        "status": "Completed"
+    }
+]

@@ -4,7 +4,6 @@ import { FiSmartphone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { GrLocationPin } from "react-icons/gr";
 import { HiLocationMarker } from "react-icons/hi";
-import videoLogo from "../../../../assets/video/_Logo.mp4";
 import Logo from "../../../../utils/Logo/Logo";
 import { useSelector } from "react-redux";
 

@@ -1,0 +1,33 @@
+.allContent{
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;  
+    width: 100%; 
+}
+.allContent > *{
+    scroll-snap-align: start;
+    overflow-y: scroll;
+}
+.data_in_number {
+    padding: 2rem 1.5rem;
+    /* background: var(--_secondary_gradient); */
+    background: linear-gradient(to right, #fdb99b, #cf8bf3,#a770ef );
+    margin: 4rem 0;
+    box-shadow: 0 0 5px gray;
+    opacity: 0;
+    transform: translateY(-10vh);
+}
+.data_count_animation{
+    transition: all ease-in-out .5s;
+    opacity: 1;
+    transform: translateY(0);
+}
+.data_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_container_animation{
+    transition: all ease .5s;
+    opacity: 1;
+    transform: translateY(0%);
+}

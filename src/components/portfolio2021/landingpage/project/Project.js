@@ -10,7 +10,7 @@ function Project() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = `https://portfolio-backend-12345.herokuapp.com/projects`;
+    const url = `http://localhost:1337/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => dispatch(setProjects({ projects: result })))

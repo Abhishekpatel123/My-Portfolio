@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
-import LandingPage from "./pages/portfolio2021/landingpage/LandingPage";
-import Admin from "./pages/admin/Admin";
-import Sidebar from "components/sidebar/SideMenu";
-import loadData from "./services/loadData";
-import { useDispatch, useSelector } from "react-redux";
-import { setColor, setGlobal } from "./store/global";
-import { About } from "components/portfolio2021/landingpage";
-import Dashboard from "./pages/common/dashboard/Dashboard";
-import { Motivation } from "pages/common/motivation";
+import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import { useDispatch, useSelector } from "react-redux";
+
+import Sidebar from "components/sidebar/SideMenu";
+import { setGlobal } from "store/global";
+import Dashboard from "pages/common/dashboard/Dashboard";
+import { Motivation } from "pages/common/motivation";
+import Portfolios from "pages/common/portfolios";
+import LandingPage from "pages/portfolio2021/LandingPage";
+import AboutMe from "pages/common/aboutMe/AboutMe";
+import { ColorPicker, CommingSoon } from "helpers";
+// import loadData from "services/loadData";
+import { useQuery } from "react-query";
 
 const useStyles = makeStyles((theme) => ({
   main_content: {
@@ -20,86 +23,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const URL = `http://localhost:1337/global`;
+const loadData = () => fetch(URL).then((result) => result.json());
+
 function App() {
+  // sidebar toggle state
   const [inactive, setInactive] = useState(false);
   const dispatch = useDispatch();
+  // global state of color
   const { color } = useSelector((state) => state.global);
   const classes = useStyles();
-  useEffect(() => {
-    const URL = `https://portfolio-backend-12345.herokuapp.com/global`;
-    loadData(URL).then((respose) => {
-      dispatch(setGlobal(respose));
-    });
-  }, []);
 
-  function CommingSoon({ inactive, title }) {
-    return (
-      <div
-        style={{ marginLeft: "1rem" }}
-        className={`${inactive ? "inactive" : ""}`}
-      >
-        {title}
-      </div>
-    );
-  }
-
-  const handleColor = () => {
-    const arraySet = [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-    ];
-    const R =
-      arraySet[Math.floor(Math.random() * 16)] +
-      arraySet[Math.floor(Math.random() * 16)];
-    const G =
-      arraySet[Math.floor(Math.random() * 16)] +
-      arraySet[Math.floor(Math.random() * 16)];
-    const B =
-      arraySet[Math.floor(Math.random() * 16)] +
-      arraySet[Math.floor(Math.random() * 16)];
-    // const A = arraySet[Math.floor(Math.random() * 16)] + arraySet[Math.floor(Math.random() * 16)];
-    const color = `#${R}${G}${B}`;
-    // setColor(color);
-    dispatch(setColor({ color }));
-  };
-
-  const ColorPicker = () => {
-    return (
-      <div className="color-picker">
-        <button className="btn" onClick={() => setColor("#a210da")}>
-          Default
-        </button>
-        <button className="btn" onClick={handleColor}>
-          Random
-        </button>
-        <h6 style={{ color, marginTop: 5 }}>{color}</h6>
-      </div>
-    );
-  };
+  const { data, isLoading } = useQuery("global", loadData);
+  useEffect(() => dispatch(setGlobal(data)), [isLoading]);
 
   return (
     <div>
       <ColorPicker />
-      <Sidebar
-        color={color}
-        onCollapse={(inactive) => {
-          setInactive(inactive);
-        }}
-      />
+      <Sidebar color={color} onCollapse={(inactive) => setInactive(inactive)} />
       <div
         style={{ padding: "0px 0px 15px 40px" }}
         className={`route-container ${inactive ? "inactive" : ""} ${
@@ -109,6 +50,11 @@ function App() {
         <Switch>
           <Route
             exact
+            path="/portfolio2021"
+            component={() => <LandingPage inactive={inactive} />}
+          />
+          <Route
+            exact
             path="/"
             component={() => (
               <Dashboard title="Dashboard Comming soon" inactive={inactive} />
@@ -116,18 +62,10 @@ function App() {
           />
           <Route
             exact
-            path="/portfolio2021"
-            component={() => <LandingPage inactive={inactive} />}
-          />
-          <Route
-            exact
-            path="/portfolio2021/courses"
-            component={() => <LandingPage inactive={inactive} />}
-          />
-          <Route
-            exact
-            path="/portfolio2021/videos"
-            component={() => <LandingPage inactive={inactive} />}
+            path="/portfolios"
+            component={() => (
+              <Portfolios title="Dashboard Comming soon" inactive={inactive} />
+            )}
           />
           <Route
             exact
@@ -139,7 +77,20 @@ function App() {
               />
             )}
           />
+          <Route exact path="/aboutme" component={() => <AboutMe />} />
+          <Route exact path="/motivations" component={() => <Motivation />} />
+
+          {/* <Route
+            exact
+            path="/portfolio2021/courses"
+            component={() => <LandingPage inactive={inactive} />}
+          />
           <Route
+            exact
+            path="/portfolio2021/videos"
+            component={() => <LandingPage inactive={inactive} />}
+          /> */}
+          {/* <Route
             exact
             path="/portfolio2022/courses"
             component={() => (
@@ -158,11 +109,7 @@ function App() {
                 inactive={inactive}
               />
             )}
-          />
-          <Route exact path="/aboutme" component={() => <About />} />
-          <Route exact path="/motivation" component={() => <Motivation />} />
-
-          <Route path="/admin" component={Admin} />
+          /> */}
         </Switch>
       </div>
     </div>

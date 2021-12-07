@@ -17,7 +17,7 @@ function Languages() {
     //   .catch((err) => {
     //     console.log(err, "error ");
     //   });
-    fetch(`https://portfolio-backend-12345.herokuapp.com/skills`)
+    fetch(`http://localhost:1337/skills`)
       .then((result) => result.json())
       .then((result) => setSkills(result))
       .catch((err) => console.log(err, "er"));
@@ -39,6 +39,7 @@ function Languages() {
   //         observe.observe(card)
   //     })
   // }, [])
+  
   const data = [
     {
       name: "frontend",
@@ -96,10 +97,11 @@ function Languages() {
             {staticData.skills.title} <span>{staticData.skills.sub_title}</span>
           </h3>
           <div className="card_container">
-            {skills?.map((lang, idx) => (
+            {skills?.length > 0 && skills?.map((lang, idx) => (
               <Card key={idx} lang={lang} />
             ))}
           </div>
+
           <Box my={3}>
             <Grid container direction="column" spacing={2}>
               {data?.map((item, idx) => (

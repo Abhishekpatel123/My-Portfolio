@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { createSlice } from "@reduxjs/toolkit";
 import initialState from "./initialState";
 

@@ -16,10 +16,10 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          minWidth: 150,
-          fontFamily: "cursive",
-          minHeight: 50,
-          borderRadius: 10,
+          // minWidth: 150,
+          // fontFamily: "cursive",
+          // minHeight: 50,
+          // borderRadius: 10,
         },
       },
     },
