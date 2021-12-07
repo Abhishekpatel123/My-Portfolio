@@ -5,6 +5,7 @@ import "./Languages.css";
 import staticData from "data/staticData";
 import { Fade } from "react-reveal";
 import { Box, Stack, Chip, Grid, Divider, Typography } from "@mui/material";
+import URL from "configs";
 
 function Languages() {
   const [skills, setSkills] = useState([]);
