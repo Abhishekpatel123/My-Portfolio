@@ -10,7 +10,7 @@ function Project() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = `http://localhost:1337/projects`;
+    const url = `${process.env.URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => dispatch(setProjects({ projects: result })))

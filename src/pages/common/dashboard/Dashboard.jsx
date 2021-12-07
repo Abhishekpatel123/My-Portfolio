@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const getProjects = () => {
-  const url = `http://localhost:1337/projects`;
+  const url = `${process.env.URL}/projects`;
   return fetch(url).then((result) => result.json());
 };
 
@@ -74,7 +74,7 @@ const Dashboard = () => {
     // console.log(valuesArray, "value array ");
     // setValues(valuesArray);
 
-    const url = `http://localhost:1337/projects`;
+    const url = `${process.env.URL}/projects`;
     fetch(url)
       .then((result) => result.json())
       .then((result) => {

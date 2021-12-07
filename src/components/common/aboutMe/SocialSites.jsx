@@ -20,7 +20,7 @@ function SocialSites() {
   const classes = useStyles();
   const { global } = useSelector((state) => state.global);
   console.log(global, "global");
-  // const URL = `http://localhost:1337/global`;
+  // const URL = `${process.env.URL}/global`;
   // const { data, isLoading } = useQuery("global", loadData(URL));
   // useEffect(() => !isLoading && dispatch(setGlobal(data)), [isLoading]);
 
@@ -54,7 +54,7 @@ function SocialSites() {
                 <img
                   width="20px"
                   height="20px"
-                  src={"http://localhost:1337" + icon.url}
+                  src={`${process.env.URL}` + icon.url}
                 />
                 <h6 style={{ marginLeft: 10 }}>
                   <a style={{ letterSpacing: 2 }} href={url} target="_blank">

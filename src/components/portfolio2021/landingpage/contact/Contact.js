@@ -11,7 +11,7 @@ function Contact() {
     setInput((pre) => ({ ...pre, [e.target.name]: e.target.value }));
 
   const handleSubmit = () => {
-    const URL = `http://localhost:1337/feedbacks`;
+    const URL = `${process.env.URL}/feedbacks`;
     fetch(URL, {
       method: "POST",
       body: JSON.stringify(input),

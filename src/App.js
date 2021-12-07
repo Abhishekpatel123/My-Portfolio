@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const URL = `http://localhost:1337/global`;
+const URL = `${process.env.URL}/global`;
 const loadData = () => fetch(URL).then((result) => result.json());
 
 function App() {

@@ -4,7 +4,7 @@ import { Box, Typography, Chip, Grid } from "@mui/material";
 import { useQuery } from "react-query";
 
 const getProjects = () => {
-  const url = `http://localhost:1337/projects`;
+  const url = `${process.env.URL}/projects`;
   return fetch(url).then((result) => result.json());
 };
 
