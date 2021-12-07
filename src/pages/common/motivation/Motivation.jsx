@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React, { useState } from "react";
-import motivaitions from "json/motivations.json";
+import motivaitions from "db/motivations.json";
 // import Heading from "utils/Heading/Heading";
 
 const useStyles = makeStyles((theme) => ({

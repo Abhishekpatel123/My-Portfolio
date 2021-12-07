@@ -22,6 +22,7 @@ import CommingSoon from "helpers/CommingSoon";
 // import { PieChart, Pie, Tooltip, Cell, Legend } from "recharts";
 // import { Bar } from "react-chartjs-2";
 
+console.log(process.env,  process.env.REACT_APP_SERVER_URL , "process env");
 const pnges = [runningPng, completedPng, pendingPng, totalPng];
 const data = [
   {

@@ -1,4 +1,4 @@
-[
+export default [
     {
         "id": 5,
         "title": "Live Comment Web App",
