@@ -13,15 +13,11 @@ import {
 } from "components/portfolio2021/landingpage";
 import staticData from "data/staticData";
 
-function Home({ inactive }) {
-  let data;
+function Portfolio2021() {
   const observer = new IntersectionObserver(
     function (entries, observer) {
       entries.forEach((entrie) => {
-        if (!entrie.isIntersecting) {
-          return;
-        }
-        // var scrolled = window.pageYOffset;
+        if (!entrie.isIntersecting) return;
         entrie.target.classList.toggle("data_count_animation");
         observer.unobserve(entrie.target);
       });
@@ -74,4 +70,4 @@ function Home({ inactive }) {
   );
 }
 
-export default Home;
+export default Portfolio2021;

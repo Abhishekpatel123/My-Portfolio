@@ -1,5 +1,5 @@
 // feature or page etc comming soon
-const CommingSoon = ({ inactive, title }) => (
+const CommingSoon = ({ inactive, title = "Comming Soon" }) => (
   <div
     style={{ marginLeft: "1rem" }}
     className={`${inactive ? "inactive" : ""}`}
