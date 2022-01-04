@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useSelector } from "react-redux";
 import { Box } from "@mui/material";
 
 import URL from "configs";
-import { Overview, UpcomingEvents, Suggestion } from "components/dashboard";
+import { Loading } from "helpers";
 import { useStyles } from "./stylesheet";
 
-// import { useQuery } from "react-query";
-// import { PieChart, Pie, Tooltip, Cell, Legend } from "recharts";
-// import { Bar } from "react-chartjs-2";
+const Overview = React.lazy(() =>
+  import("components/dashboard/overview/Overview")
+);
+const UpcomingEvents = React.lazy(() =>
+  import("components/dashboard/upcommingEvents/UpcomingEvents")
+);
+const Suggestion = React.lazy(() =>
+  import("components/dashboard/suggestion/Suggestion")
+);
 
 const Dashboard = () => {
   const { color } = useSelector((state) => state.global);
@@ -45,12 +51,14 @@ const Dashboard = () => {
 
   return (
     <Box width="100%" height="100vh" pr={1}>
-      {/* overview of our app */}
-      <Overview />
-      {/* upcoming events  */}
-      <UpcomingEvents />
-      {/* suggestion  */}
-      <Suggestion />
+      <Suspense fallback={<Loading />}>
+        {/* overview of our app */}
+        <Overview />
+        {/* upcoming events  */}
+        <UpcomingEvents />
+        {/* suggestion  */}
+        <Suggestion />
+      </Suspense>
     </Box>
   );
 };
