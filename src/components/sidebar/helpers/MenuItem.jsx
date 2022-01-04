@@ -17,8 +17,6 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles((theme) => ({
   selected: {
     backgroundColor: "#e5e5e5b8 !important",
-    boxShadow: theme.shadows[2],
-    borderRadius: "4px !important",
   },
 }));
 const MenuItem = (props) => {
@@ -33,17 +31,19 @@ const MenuItem = (props) => {
     setSelectedIndex,
     index,
     icon,
+    handleSidebarClose,
   } = props;
   const [expand, setExpand] = useState(false);
   const classes = useStyles();
   const handleListItemClick = (event, index) => {
     console.log(index);
     setSelectedIndex(index);
+    handleSidebarClose();
   };
 
   return (
     <ListItemButton
-      sx={{ mb: .2 }}
+      sx={{ mb: 0.2 }}
       key={index}
       classes={{
         selected: classes.selected,

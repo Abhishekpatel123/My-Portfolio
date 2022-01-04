@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { makeStyles } from "@mui/styles";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,7 +26,8 @@ function App() {
   const dispatch = useDispatch();
   const { color } = useSelector((state) => state.global);
   // sidebar toggle state
-  const [inactive, setInactive] = useState(false);
+  // const [inactive, setInactive] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const { data, isLoading } = useQuery("global", loadData);
   useEffect(() => dispatch(setGlobal(data)), [isLoading]);
@@ -34,14 +35,19 @@ function App() {
   return (
     <div>
       <ColorPicker />
-      <Sidebar color={color} onCollapse={(inactive) => setInactive(inactive)} />
+      <Sidebar
+        setOpen={setOpen}
+        open={open}
+        color={color}
+        onCollapse={(inactive) => setOpen(inactive)}
+      />
       <div
         style={{ padding: "0px 0px 15px 40px" }}
-        className={`route-container ${inactive ? "inactive" : ""} ${
+        className={`route-container ${!open ? "inactive" : ""} ${
           classes.main_content
         }`}
       >
-        <Routes inactive={inactive} />
+        <Routes inactive={open} />
       </div>
     </div>
   );

@@ -49,7 +49,6 @@ const Dashboard = () => {
     getProjects();
   }, []);
 
-  return <Loading />
   return (
     <Box width="100%" height="100vh" pr={1}>
       <Suspense fallback={<Loading />}>
