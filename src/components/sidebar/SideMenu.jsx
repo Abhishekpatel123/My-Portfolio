@@ -9,23 +9,22 @@ import {
 } from "@mui/icons-material";
 import { Box } from "@mui/material";
 
-import MenuItem from "./MenuItem";
+import MenuItem from "./helpers/MenuItem";
 import sidebarLinks from "data/sidebarLinks.data";
 import { sidebarBackground, profileImage } from "assets";
 import "./index.css";
 
 import { Divider, List, Typography } from "@mui/material";
-// import { useSelector } from "react-redux";
 
 const icons = [
   <Dashboard />,
   <MarginRounded />,
   <EmojiObjects />,
   <PermContactCalendarRounded />,
-];
+]; 
 
 const SideMenu = ({ color, onCollapse }) => {
-  const [inactive, setInactive] = useState(false);
+  const [inactive, setInactive] = useState(true);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   useEffect(() => {

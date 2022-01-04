@@ -1,3 +1,6 @@
+import { makeStyles } from "@mui/styles";
+import portfolioBanner from "assets/images/portfolioBanner.svg";
+
 export const useStyles = makeStyles((theme) => ({
   root: {
     position: "relative",
@@ -17,7 +20,7 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   portfolioCard: {
-    backgroundImage: `url(${bg1})`,
+    backgroundImage: `url(${portfolioBanner})`,
     width: "900px",
     borderLeft: "4px inset orange",
     height: "200px",

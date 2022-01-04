@@ -1,5 +1,4 @@
 import React from "react";
-import bg1 from "./bg1.svg";
 import { Box, Typography, Button, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Link } from "react-router-dom";

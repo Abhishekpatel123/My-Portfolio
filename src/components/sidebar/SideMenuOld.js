@@ -3,8 +3,8 @@ import { Menu, MenuOpen } from "@mui/icons-material";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "@mui/material";
 
-import MenuItem from "./MenuItem";
-import MobileMenuItem from "./MobileMenuItem";
+import MenuItem from "./helpers/MenuItem";
+import MobileMenuItem from "./helpers/MobileMenuItem";
 import MYImage from "../../assets/images/abhishek.jpeg";
 import "./index.css";
 import sidebarLinks from "data/sidebarLinks.data";

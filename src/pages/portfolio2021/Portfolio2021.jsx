@@ -14,6 +14,7 @@ import {
 import staticData from "data/staticData";
 
 function Portfolio2021() {
+  let data;
   const observer = new IntersectionObserver(
     function (entries, observer) {
       entries.forEach((entrie) => {

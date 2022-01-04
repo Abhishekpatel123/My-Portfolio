@@ -17,11 +17,10 @@ const Routes = () => {
     <React.Suspense fallback={<Loading />}>
       <Switch>
         <Route exact path="/" component={Dashboard} />
-        <Route exact path="/portfolio2021" component={Portfolio2021} />
         <Route exact path="/portfolios" component={Portfolios} />
         <Route exact path="/aboutme" component={AboutMe} />
         <Route exact path="/motivations" component={Motivation} />
-        <Route exact path="/portfolio2022" component={CommingSoon} />
+        <Route exact path="/portfolio2021" component={Portfolio2021} />
       </Switch>
     </React.Suspense>
   );
