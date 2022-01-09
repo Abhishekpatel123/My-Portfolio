@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 const MobileMenuItem = (props) => {
-  const { name, subMenus, iconClassName, onClick, to, exact } = props;
+  const { name, subMenus, iconClassName, to } = props;
   const [expand, setExpand] = useState(false);
 
   return (
@@ -10,9 +10,7 @@ const MobileMenuItem = (props) => {
       <Link
         exact
         to={to}
-        onClick={() => {
-          setExpand(!expand);
-        }}
+        onClick={() => setExpand(!expand)}
         className={`menu-item`}
       >
         <div className="menu-icon">

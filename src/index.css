@@ -8,11 +8,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* cursor: url("cursor.svg"), auto; */
-
-  /* font-family: 'Merriweather', serif; */
   font-family: "Poppins", sans-serif;
-  /* font-family: 'Fira Sans', sans-serif; */
 }
 
 p {

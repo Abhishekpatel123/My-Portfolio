@@ -4,7 +4,7 @@ import { useStyles } from "./stylesheet";
 const CommentCard = () => {
   const classes = useStyles();
   return (
-    <Box sx={{ border: "1px solid green", minHeight: "40px" }}>
+    <Box className={classes.root}>
       <Box
         minHeight={60}
         position="relative"

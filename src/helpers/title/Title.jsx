@@ -1,7 +1,20 @@
 import React from "react";
+import { Typography } from "@mui/material";
+import { useStyles } from "./stylesheet";
 
 const Title = ({ name }) => {
-  return <h3 style={{ padding: "1rem 0 .5rem 0" }}>{name}</h3>;
+  const classes = useStyles();
+  return (
+    <h3 className={classes.root}>
+      <Typography
+        component={"em"}
+        variant="h5"
+        classes={{ root: classes.title }}
+      >
+        {name}
+      </Typography>
+    </h3>
+  );
 };
 
 export default Title;

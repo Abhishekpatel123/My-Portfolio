@@ -1,9 +1,29 @@
 export const upcomingEventsData = [
-  { name: "Comment feature", number: "04" },
-  { name: "Motivation quotes feature", number: "04" },
-  { name: "Google Analytic feature", number: "02" },
-  { name: "Progress analytic featue", number: "05" },
-  { name: "Blog feature", number: "11" },
+  {
+    title: "Announcing our Series A",
+    description:
+      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+  },
+  {
+    title: "Motivation quotes feature",
+    description:
+      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+  },
+  {
+    title: "Google Analytic feature",
+    description:
+      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+  },
+  {
+    title: "Progress analytic featue",
+    description:
+      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+  },
+  {
+    title: "Blog feature",
+    description:
+      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+  },
 ];
 
 export const overviewData = [

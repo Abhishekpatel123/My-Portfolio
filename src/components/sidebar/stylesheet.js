@@ -1,6 +1,12 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
+  toggleIcon: {
+    backgroundColor: "black",
+    color: "white",
+    boxShadow: theme.shadows[1],
+  },
+
   root: {
     position: "fixed",
     // background: "#000",
@@ -32,16 +38,16 @@ export const useStyles = makeStyles((theme) => ({
       right: "-50px",
     },
   },
-  
+
   mainMenu: {
     margin: "5px 0",
     position: "relative",
     overflowY: "scroll",
     overflowX: "hidden",
   },
-  userInfo : {
+  userInfo: {
     opacity: 1,
     transition: "opacity 0.2s ease-in",
-    overflow: "hidden",  
-  }
+    overflow: "hidden",
+  },
 }));

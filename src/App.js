@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { makeStyles } from "@mui/styles";
 import { useDispatch, useSelector } from "react-redux";
 
-import { ColorPicker, CommingSoon } from "helpers";
+import { ColorPicker } from "helpers";
 import { setGlobal } from "store/global";
 import Sidebar from "components/sidebar/SideMenu";
 import URL from "configs";
@@ -25,8 +25,6 @@ function App() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const { color } = useSelector((state) => state.global);
-  // sidebar toggle state
-  // const [inactive, setInactive] = useState(false);
   const [open, setOpen] = useState(false);
 
   const { data, isLoading } = useQuery("global", loadData);

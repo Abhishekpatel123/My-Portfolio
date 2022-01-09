@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
-  ArrowForwardIosOutlined,
-  ArrowBackIosOutlined,
   Dashboard,
   MarginRounded,
   EmojiObjects,
@@ -11,24 +9,15 @@ import { useStyles } from "./stylesheet";
 
 import MenuItem from "./helpers/MenuItem";
 import sidebarLinks from "data/sidebarLinks.data";
-import { sidebarBackground, profileImage } from "assets";
 
 import { styled, useTheme } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
-import Toolbar from "@mui/material/Toolbar";
-import CssBaseline from "@mui/material/CssBaseline";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import "./index.css";
 
-import { Divider, List, Typography, Box } from "@mui/material";
+import { Divider, List } from "@mui/material";
 
 const drawerWidth = 240;
 const icons = [
@@ -88,42 +77,14 @@ const Drawer = styled(MuiDrawer, {
 const SideMenu = ({ color, onCollapse, setOpen, open }) => {
   const theme = useTheme();
   const classes = useStyles();
-  // const [open, setOpen] = React.useState(true);
-  // const [inactive, setInactive] = useState(false);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(!open);
-    // setInactive(!inactive);
-  };
-
-  // useEffect(() => {
-  //   if (inactive) removeActiveClassFromSubMenu();
-  //   onCollapse(inactive);
-  // }, [inactive]);
-
-  //just an improvment and it is not recorded in video :(
-  // const removeActiveClassFromSubMenu = () => {
-  //   document
-  //     .querySelectorAll(".sub-menu")
-  //     .forEach((el) => el.classList.remove("active"));
-  // };
+  const handleDrawerClose = () => setOpen(!open);
 
   return (
     <Drawer variant="permanent" open={open}>
       <DrawerHeader>
-        <IconButton
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            boxShadow: theme.shadows[1],
-          }}
-          onClick={handleDrawerClose}
-        >
+        <IconButton className={classes.toggleIcon} onClick={handleDrawerClose}>
           {theme.direction === "rtl" || !open ? (
             <ChevronRightIcon />
           ) : (
@@ -134,28 +95,6 @@ const SideMenu = ({ color, onCollapse, setOpen, open }) => {
 
       <Divider />
       <List>
-        {/* <ListItem button>
-          <ListItemIcon>
-            <Box
-              sx={{
-                minWidth: 50,
-                height: 50,
-                border: "3px solid #fff",
-                borderRadius: "50%",
-                boxShadow: 5,
-              }}
-            >
-              <img
-                style={{ borderRadius: "50%" }}
-                src={profileImage}
-                width="100%"
-                height="100%"
-                alt="my profile"
-              />
-            </Box>
-          </ListItemIcon>
-          <ListItemText primary={"Abhishek Patel"} />
-        </ListItem> */}
         {sidebarLinks.map((menuItem, index) => (
           <MenuItem
             icon={icons[index]}
