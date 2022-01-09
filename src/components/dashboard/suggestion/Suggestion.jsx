@@ -6,6 +6,7 @@ import CommentCard from "./helpers/commentCard/CommentCard";
 import CommingSoon from "helpers/CommingSoon";
 import { useStyles } from "./stylesheet";
 import { CustomTextarea } from "helpers";
+import CustomButton from "helpers/customButton/CustomButton";
 
 const commingSoon = false;
 const Suggestion = () => {
@@ -29,14 +30,7 @@ const Suggestion = () => {
         </Box>
       </Grid>
       <Grid item>
-        <Button
-          sx={{ height: "fit-content" }}
-          size="small"
-          variant="outlined"
-          startIcon={<AddCircleOutline />}
-        >
-          Add Suggestion
-        </Button>
+        <CustomButton name="Add Suggestion" StartIcon={AddCircleOutline} />
       </Grid>
       {/* commnets of people  */}
       <Grid item xs={12} sx={{ my: 2 }}>

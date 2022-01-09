@@ -1,15 +1,15 @@
 const { createTheme } = require("@mui/material/styles");
-const { orange } = require("@mui/material/colors");
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: orange[500],
-      light: orange[200],
-      dark: orange[700],
+      main: "#ff6363",
+      // main: orange[500],
+      light: "#ffadad",
+      dark: "#873232",
     },
     secondary: {
-      main: "#000",
+      main: "#9b4dff",
     },
   },
   components: {
