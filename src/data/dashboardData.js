@@ -1,34 +1,46 @@
 export const upcomingEventsData = [
   {
-    title: "Announcing our Series A",
+    id: 1,
+    title: "Suggestion",
     description:
-      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+      "I'm adding functionality for anyone want to suggest me anything feel free to do that.",
   },
   {
+    id: 2,
     title: "Motivation quotes feature",
     description:
-      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
-  },
-  {
-    title: "Google Analytic feature",
-    description:
-      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
-  },
-  {
-    title: "Progress analytic featue",
-    description:
-      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+      "I'm going to add motivation quotes feature.",
   },
   {
     title: "Blog feature",
     description:
-      "We're really excited to announce our Series A of $15m, led by Accel and Coatue.",
+      "I'm going to add My Blog feature.",
   },
 ];
 
 export const overviewData = [
-  { name: "Running Projects", number: "04" },
-  { name: "Completed Projets", number: "02" },
-  { name: "Pending Projects", number: "05" },
-  { name: "Total Projects", number: "11" },
+  {
+    id: 1,
+    name: "Running Projects",
+    // portfolio, trello , my app , rentit
+    number: "04",
+  },
+  {
+    id: 2,
+    name: "Completed Projets",
+    // comment app ,plzenpharma , MedisureIncinerators
+    number: "03",
+  },
+  {
+    id: 3,
+    name: "Pending Projects",
+    //  feetitback , q-post , adventureit , chatting web app , octo master ,
+    number: "05",
+  },
+  {
+    id: 4,
+    // ,
+    name: "Total Projects",
+    number: "12",
+  },
 ];
