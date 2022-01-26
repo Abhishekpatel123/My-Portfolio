@@ -6,21 +6,7 @@ import useStyles from "./stylesheet";
 import { SocialSites, WorkExperience } from "components/common/aboutMe";
 import Skills from "components/common/aboutMe/Skills";
 import Projects from "components/common/aboutMe/Projects";
-
-const personalInfo = [
-  {
-    name: "hire me",
-    values: ["+6267280684", "+8719098751"],
-  },
-  {
-    name: "address",
-    values: ["pipariya (M.P)"],
-  },
-  {
-    name: "born in",
-    values: ["April 04,2000"],
-  },
-];
+import { aboutMeData } from "data/personalInfo";
 
 function AboutMe() {
   const classes = useStyles({ profileImage: Images.profileImage });
@@ -39,7 +25,7 @@ function AboutMe() {
           <h3 className={classes.title}>MERN STACK DEVELOPER</h3>
         </Grid>
         <Grid item xs={12} sm={2}>
-          {personalInfo?.map(({ name, values }, idx) => (
+          {aboutMeData?.map(({ name, values }, idx) => (
             <Box display="flex" key={`${name}-${idx}`}>
               <Typography>{name} :</Typography>
               <Box>
@@ -70,7 +56,7 @@ function AboutMe() {
         </Grid>
 
         {/* projects */}
-        <Grid item xs={12}  style={{ marginTop: "2rem" }}>
+        <Grid item xs={12} style={{ marginTop: "2rem" }}>
           <Projects />
         </Grid>
 
