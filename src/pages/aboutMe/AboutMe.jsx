@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Box, Typography, Divider, Button } from "@mui/material";
-
+import { Link } from "react-router-dom";
 import Images from "assets/index";
 import useStyles from "./stylesheet";
 import { SocialSites, WorkExperience } from "components/common/aboutMe";
@@ -38,15 +38,21 @@ function AboutMe() {
             </Box>
           ))}
           <Box mt={2}>
-            <Button
-              sx={{ displayPrint: "none" }}
-              variant="contained"
-              color="secondary"
-              size="large"
-              onClick={() => window.print()}
+            <Link
+              href={require("../../assets/docs/resume.pdf")}
+              target="_blank"
+              download="resume.pdf"
             >
-              Print CV
-            </Button>
+              <Button
+                sx={{ displayPrint: "none" }}
+                variant="contained"
+                color="secondary"
+                size="large"
+                // onClick={() => window.print()}
+              >
+                Print CV
+              </Button>
+            </Link>
           </Box>
         </Grid>
 
@@ -57,7 +63,7 @@ function AboutMe() {
 
         {/* projects */}
         <Grid item xs={12} style={{ marginTop: "2rem" }}>
-          <Projects />
+          {/* <Projects /> */}
         </Grid>
 
         {/* work experience */}

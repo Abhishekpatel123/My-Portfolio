@@ -16,38 +16,41 @@ const Suggestion = React.lazy(() =>
   import("components/dashboard/suggestion/Suggestion")
 );
 
+// const ComingSoon = React.lazy(() => import("helpers/Coming"));
+const ComingSoon = React.lazy(() => import("helpers/ComingSoon"));
+
 const Dashboard = () => {
-  const { color } = useSelector((state) => state.global);
-  const classes = useStyles();
-  const colors = [color, "#000000"];
-  const [labels, setLabels] = useState([]);
-  const [values, setValues] = useState([]);
+  // const { color } = useSelector((state) => state.global);
+  // const classes = useStyles();
+  // const colors = [color, "#000000"];
+  // const [labels, setLabels] = useState([]);
+  // const [values, setValues] = useState([]);
 
-  const getProjects = async () => {
-    const url = `${URL}/projects`;
-    try {
-      const jsonResponse = await fetch(url);
-      const response = await jsonResponse.json();
+  // const getProjects = async () => {
+  //   const url = `${URL}/projects`;
+  //   try {
+  //     const jsonResponse = await fetch(url);
+  //     const response = await jsonResponse.json();
 
-      let array = [];
-      response.forEach(({ tech_usages }) => {
-        tech_usages?.forEach((skill) => array.push(skill.name));
-      });
-      const valuesArray = array.map((ele) => {
-        let count = 0;
-        array.forEach((item) => item === ele && count++);
-        return count;
-      });
-      setValues(valuesArray);
-      setLabels(array);
-    } catch (error) {
-      throw error;
-    }
-  };
+  //     let array = [];
+  //     response.forEach(({ tech_usages }) => {
+  //       tech_usages?.forEach((skill) => array.push(skill.name));
+  //     });
+  //     const valuesArray = array.map((ele) => {
+  //       let count = 0;
+  //       array.forEach((item) => item === ele && count++);
+  //       return count;
+  //     });
+  //     setValues(valuesArray);
+  //     setLabels(array);
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // };
 
-  useEffect(() => {
-    getProjects();
-  }, []);
+  // useEffect(() => {
+  //   getProjects();
+  // }, []);
 
   return (
     <Box width="100%" height="100vh" pr={1}>
@@ -57,7 +60,8 @@ const Dashboard = () => {
         {/* upcoming events  */}
         <UpcomingEvents />
         {/* suggestion  */}
-        <Suggestion />
+        {/* <Suggestion /> */}
+        <ComingSoon heading="Suggestions" />
       </Suspense>
     </Box>
   );

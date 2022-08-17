@@ -11,21 +11,22 @@ import {
 } from "@mui/material";
 import { useQuery } from "react-query";
 import URL from "configs";
-
-const getProjects = () => {
-  const url = `${URL}/projects`;
-  return fetch(url).then((result) => result.json());
-};
+import projects from "data/projects";
+// const getProjects = () => {
+//   const url = `${URL}/projects`;
+//   return fetch(url).then((result) => result.json());
+// };
+const isLoading = false;
 
 function Projects() {
-  const { data: projects, isLoading } = useQuery("projects", getProjects);
+  // const { data: projects, isLoading } = useQuery("projects", getProjects);
 
   return (
     <Wrapper title="PROJECTS">
       {isLoading ? (
         <h2>loading</h2>
       ) : (
-        <Grid container spacing = {4}>
+        <Grid container spacing={4}>
           {projects.length &&
             projects?.map((info, idx) => (
               // <Grid container style={{ padding: "10px" }} spacing={2} key={idx}>
@@ -48,24 +49,24 @@ function Projects() {
               // </Box>
               //   </Grid>
               // </Grid>
-              <Grid key = {idx} item xs={12} md={4}>
+              <Grid key={idx} item xs={12} md={4}>
                 <Card>
                   <CardMedia
                     component="img"
                     height="200"
                     alt="project image"
-                    image={info?.coverImage?.url}
+                    image={info?.imageURL}
                   />
                   <CardContent>
                     <Typography gutterBottom variant="body1">
                       {info?.title}
                     </Typography>
                     <Box>
-                      {info?.tech_usages?.map((stack) => (
+                      {info?.tech_usages?.map((item) => (
                         <Chip
-                          label={stack?.name}
+                          label={item}
                           size="small"
-                          style={{ marginRight: "10px" }}
+                          style={{ marginRight: "10px", marginBottom: "10px" }}
                           variant="filled"
                         />
                       ))}

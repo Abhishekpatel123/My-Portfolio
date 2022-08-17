@@ -61,7 +61,7 @@ function Portfolio2021() {
         </div>
         <About />
         <Languages />
-        <Project />
+        {/* <Project /> */}
         <Interest />
         <Experience />
         <Contact />

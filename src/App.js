@@ -19,31 +19,31 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const loadData = () => fetch(`${URL}/global`).then((result) => result.json());
+// const loadData = () => fetch(`${URL}/global`).then((result) => result.json());
 
 function App() {
   const classes = useStyles();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { color } = useSelector((state) => state.global);
   const [open, setOpen] = useState(false);
 
-  const { data, isLoading } = useQuery("global", loadData);
-  useEffect(() => dispatch(setGlobal(data)), [isLoading]);
+  // const { data, isLoading } = useQuery("global", loadData);
+  // useEffect(() => dispatch(setGlobal(data)), [isLoading]);
 
   return (
     <div>
       <ColorPicker />
-      <Sidebar
+      {/* <Sidebar
         setOpen={setOpen}
         open={open}
         color={color}
         onCollapse={(inactive) => setOpen(inactive)}
-      />
+      /> */}
       <div
         style={{ padding: "0px 0px 15px 40px" }}
-        className={`route-container ${!open ? "inactive" : ""} ${
-          classes.main_content
-        }`}
+        // className={`route-container ${!open ? "inactive" : ""} ${
+        //   classes.main_content
+        // }`}
       >
         <Routes inactive={open} />
       </div>

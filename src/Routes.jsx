@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { CommingSoon } from "helpers";
+import { ComingSoon } from "helpers";
 import { Loading } from "helpers";
 
 const Dashboard = React.lazy(() => import("pages/dashboard/Dashboard"));
@@ -16,11 +16,12 @@ const Routes = () => {
   return (
     <React.Suspense fallback={<Loading />}>
       <Switch>
-        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/" component={Portfolio2021} />
+        {/* <Route exact path="/" component={Dashboard} />
         <Route exact path="/portfolios" component={Portfolios} />
         <Route exact path="/aboutme" component={AboutMe} />
-        <Route exact path="/motivations" component={Motivation} />
-        <Route exact path="/portfolio2021" component={Portfolio2021} />
+        <Route exact path="/motivations" component={Motivation} /> */}
+        {/* <Route exact path="/portfolio2021" component={Portfolio2021} /> */}
       </Switch>
     </React.Suspense>
   );

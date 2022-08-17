@@ -10,7 +10,7 @@ import {
 import { CheckCircleOutlineOutlined } from "@mui/icons-material";
 
 const WECard = ({ info }) => {
-  const { company, timeInterval, skill, btnStatus, btnColor } = info;
+  const { company, timeInterval, skill, btnStatus, btnColor, points } = info;
   return (
     <Card>
       <CardContent>
@@ -40,11 +40,12 @@ const WECard = ({ info }) => {
         </Box>
 
         {/* descreption */}
-        <Box mt={2}>
-          <Typography variant="caption" color="gray">
-            Worked on backend using node and also in frontend using react .
-            Currently I am managing both frontend and backend
-          </Typography>
+        <Box mt={2} sx={{ minHeight: "100px" }}>
+          {points?.map((point, idx) => (
+            <Typography variant="caption" component="p" color="gray">
+              - {point}
+            </Typography>
+          ))}
         </Box>
         {/* timing */}
         <Box display="flex" mt={2} justifyContent="space-between">

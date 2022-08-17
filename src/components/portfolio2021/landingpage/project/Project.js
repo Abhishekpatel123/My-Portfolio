@@ -4,19 +4,20 @@ import "./Project.css";
 import staticData from "data/staticData";
 import SubHeading from "helpers/SubHeading";
 import { useDispatch, useSelector } from "react-redux";
-import { setProjects } from "store/portfolio2021";
+import projects from "../../../../data/projects";
+// import { setProjects } from "store/portfolio2021";
 import URL from "configs";
 function Project() {
-  const { projects } = useSelector((state) => state.portfolio2021);
-  const dispatch = useDispatch();
+  // const { projects } = useSelector((state) => state.portfolio2021);
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    const url = `${URL}/projects`;
-    fetch(url)
-      .then((result) => result.json())
-      .then((result) => dispatch(setProjects({ projects: result })))
-      .catch((err) => alert("error"));
-  }, []);
+  // useEffect(() => {
+  //   const url = `${URL}/projects`;
+  //   fetch(url)
+  //     .then((result) => result.json())
+  //     .then((result) => dispatch(setProjects({ projects: result })))
+  //     .catch((err) => alert("error"));
+  // }, []);
   return (
     <div name="project" className="project">
       <div className="container content">
@@ -26,7 +27,7 @@ function Project() {
             <div className="card" key={idx}>
               <div className="image_container">
                 <img
-                  src={`process.env.SERVER_URL${item.coverImage.url}`}
+                  src={`process.env.SERVER_URL${item.imageURL}`}
                   alt="project"
                 />
               </div>
@@ -47,7 +48,7 @@ function Project() {
                     }}
                     key={idx}
                   >
-                    {skill.name}
+                    {skill}
                   </div>
                 ))}
               </div>

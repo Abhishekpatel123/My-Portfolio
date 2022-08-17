@@ -3,12 +3,12 @@ import { Avatar, Box, Button, Grid, Typography } from "@mui/material";
 import { AddCircleOutline } from "@mui/icons-material";
 
 import CommentCard from "./helpers/commentCard/CommentCard";
-import CommingSoon from "helpers/CommingSoon";
+import ComingSoon from "helpers/ComingSoon";
 import { useStyles } from "./stylesheet";
 import { CustomTextarea } from "helpers";
 import CustomButton from "helpers/customButton/CustomButton";
 
-const commingSoon = false;
+const comingSoon = false;
 const Suggestion = () => {
   const classes = useStyles();
 
@@ -34,10 +34,10 @@ const Suggestion = () => {
       </Grid>
       {/* commnets of people  */}
       <Grid item xs={12} sx={{ my: 2 }}>
-        {!commingSoon ? (
+        {!comingSoon ? (
           [1, 2, 3, 4, 5, 6, 7].map(() => <CommentCard />)
         ) : (
-          <CommingSoon title="Comment feature Comming Soonn" />
+          <ComingSoon title="Comment feature Comming Soonn" />
         )}
       </Grid>
     </Grid>

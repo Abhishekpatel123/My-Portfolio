@@ -6,6 +6,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
+import workExperience from "data/workExperience";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -41,10 +42,11 @@ function a11yProps(index) {
   };
 }
 
-const ExprienceInfo = ({
+const ExperienceInfo = ({
   company,
   timeInterval = "avaliable soon.",
   skill,
+  points,
 }) => {
   return (
     <Grid container maxWidth>
@@ -61,6 +63,11 @@ const ExprienceInfo = ({
         <Typography>{skill}</Typography>
         <Typography>{company}</Typography>
         <Typography>{timeInterval}</Typography>
+        {points?.map((point, idx) => (
+          <Typography variant="caption" component="p" color="gray">
+            - {point}
+          </Typography>
+        ))}
       </Grid>
     </Grid>
   );
@@ -92,43 +99,56 @@ function Experience() {
           aria-label="Vertical tabs example"
           sx={{ borderRight: 1, borderColor: "divider" }}
         >
-          <Tab label="Doof Research Private Limited" {...a11yProps(0)} />
+          {workExperience?.map((item, idx) => (
+            <Tab key={idx} label={item.company} {...a11yProps(idx)} />
+          ))}
+          {/* <Tab label="Doof Research Private Limited" {...a11yProps(0)} />
           <Tab label="Auric Touch LLP" {...a11yProps(1)} />
           <Tab label="Solera Life Science Private Limited" {...a11yProps(2)} />
           <Tab label="Dr. Goyal's Dental and TMJ Care." {...a11yProps(3)} />
-          <Tab label="Medisure Incinerators" {...a11yProps(4)} />
+          <Tab label="Medisure Incinerators" {...a11yProps(4)} /> */}
         </Tabs>
-        <TabPanel value={value} index={0}>
-          <ExprienceInfo
+        {workExperience?.map((item, idx) => (
+          <TabPanel key={idx} value={value} index={idx}>
+            <ExperienceInfo
+              company={item.company}
+              timeInterval={`${item.timeInterval.start} - ${item.timeInterval.end}`}
+              skill={item.skill}
+              points={item.points}
+            />
+          </TabPanel>
+        ))}
+        {/* <TabPanel value={value} index={0}>
+          <ExperienceInfo
             company="Doof Reaserach Private Limited. Internship"
             timeInterval="Jan 2021 - Present (11 month)"
             skill="MERN STACK DEVELOPER"
           />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <ExprienceInfo
+          <ExperienceInfo
             company="Auric Touch LLP"
             skill="MERN STACK DEVELOPER"
           />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <ExprienceInfo
+          <ExperienceInfo
             company="Solera Life Science Private Limited"
             skill="React Developer"
           />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          <ExprienceInfo
+          <ExperienceInfo
             company="Dr. Goyal's Dental and TMJ Care."
             skill="MERN STACK DEVELOPER"
           />
         </TabPanel>
         <TabPanel value={value} index={4}>
-          <ExprienceInfo
+          <ExperienceInfo
             company="Medisure Incinerators"
             skill="NODE DEVELOPER"
           />
-        </TabPanel>
+        </TabPanel> */}
       </Box>
     </div>
   );
