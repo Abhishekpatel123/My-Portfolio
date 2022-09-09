@@ -4,7 +4,7 @@ export default {
     skills: [
       " APP DEVELOPER",
       " MERN STACK DEVELOPER",
-      " PYTHON DEVELOPER (LEARNING)",
+      // " PYTHON DEVELOPER (LEARNING)",
     ],
     description:
       "I'm Abhishek Patel from India , and I am a Mern Stack Developer . I really enjoy lerarning languages and frameworks like React js , React Native , Express js etc also i am good in problem solving skill",
@@ -70,22 +70,23 @@ export default {
       {
         title: "MedisureIncinerators",
         live_url: "https://medisureincinerators.in",
-        github_url: "https://github.com/jatin-karla11/MedisureIncinerators-Backend",
+        github_url:
+          "https://github.com/jatin-karla11/MedisureIncinerators-Backend",
         img_url: "",
       },
       {
-          title: "Snake game",
-          live_url: "",
-          github_url: "",
-          img_url: "",
-        },
-        {
-            title: "PlazenPharma",
+        title: "Snake game",
+        live_url: "",
+        github_url: "",
+        img_url: "",
+      },
+      {
+        title: "PlazenPharma",
         live_url: "http://plzenpharma.com/",
         github_url: "https://github.com/Abhishekpatel123/PlazenPharma",
         img_url: "",
-    },
-    {
+      },
+      {
         title: "Rock paper scissor game",
         live_url: "https://abhishekpatel123.github.io/RPS_GAME/",
         github_url: "https://github.com/Abhishekpatel123/RPS_GAME",
@@ -93,16 +94,16 @@ export default {
       },
     ],
   },
-  interest : {
-      heading : 'DEVELOPMENT INTEREST',
-      medium : ['PROGRAMMING' , 'INOVATION'],
-      large : 'Robotic',
-      small : 'SATTVIC FOOD',
-      tall : 'RUNNING COMPANIES',
-      wide : 'LEARNING'
+  interest: {
+    heading: "INTEREST",
+    medium: ["PROGRAMMING", "INOVATION"],
+    large: "Robotic",
+    small: "SATTVIC FOOD",
+    tall: "RUNNING ",
+    wide: "LEARNING",
   },
-  contact : {
-      heading : '',
-      title : ''
-  }
+  contact: {
+    heading: "",
+    title: "",
+  },
 };

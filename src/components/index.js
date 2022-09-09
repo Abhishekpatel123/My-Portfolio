@@ -1,0 +1,9 @@
+export { default as About } from "./about/About";
+export { default as Banner } from "./banner/Banner";
+export { default as Contact } from "./contact/Contact";
+export { default as Experience } from "./experience/Experience";
+export { default as Footer } from "./footer/footer";
+export { default as Interest } from "./interest/Interest";
+export { default as Skills } from "./skills";
+export { default as Project } from "./project/Project";
+export { default as Status } from "./status/Status";

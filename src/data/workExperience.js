@@ -5,7 +5,7 @@ const workExperience = [
       start: "Jan 10, 2021",
       end: "Feb 30, 2022",
     },
-    skill: "MERN STACK DEVELOPER",
+    skill: "MERN STACK DEVELOPER Intern",
     btnStatus: "Completed",
     // btnColor: { bgcolor: "#f5b8baab", color: "#ff6469" },
     btnColor: { bgcolor: "#9afa97ab", color: "#033808" },
@@ -13,7 +13,7 @@ const workExperience = [
       "Recognized as the Best Intern Award.",
       "Developed a chrome extension for video and screen recording.",
       "Developed a system for taking feedback and survey test.",
-      "Used AWS S3, Multipart, Heroku, etc.",
+      "Used MERN STACK, AWS S3, Multipart, Heroku, etc.",
     ],
   },
   {
@@ -30,6 +30,7 @@ const workExperience = [
       "Developed a web application admin panel to manage the game (RUMMY).",
       "Developed a  web application management website.",
       "Developed an app (brainycom) to run and fully managed the community in the cloud.",
+      "Used MERN STACK, React Native, etc.",
     ],
   },
   {
@@ -45,6 +46,7 @@ const workExperience = [
     points: [
       "Maintained and completed two apps (Adify and 8chat) using react native.",
       "Adify app is for advertising.",
+      "Used React Native, Redux Toolkit, etc.",
     ],
   },
   {
