@@ -22,7 +22,8 @@
 .type-writer{
   display: flex;
   font-family: monospace;
-  background: -webkit-linear-gradient(#ba5370, #9b4dff);
+  /* background: -webkit-linear-gradient(#ba5370, #9b4dff); */
+  background: -webkit-linear-gradient(#dfc3cb, #47207a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;

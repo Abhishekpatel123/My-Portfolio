@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import {
   GitHub as GitHubIcon,
@@ -21,6 +21,33 @@ import {
   Status,
 } from "components";
 
+const socialData = [
+  {
+    id: 1,
+    Icon: GitHubIcon,
+    name: "github",
+    url: "https://github.com/Abhishekpatel123",
+  },
+  {
+    id: 2,
+    Icon: InstagramIcon,
+    name: "instagram",
+    url: "https://www.instagram.com/abhishekpatel7339/",
+  },
+  {
+    id: 3,
+    Icon: TwitterIcon,
+    name: "twitter",
+    url: "https://twitter.com/ABHISHE65635171",
+  },
+  {
+    id: 4,
+    Icon: LinkedInIcon,
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/abhishekpatel87/",
+  },
+];
+
 const useStyles = makeStyles((theme) => ({
   sideContainer: {
     position: "fixed",
@@ -29,12 +56,12 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    justifyContent: "end",
     alignItems: "center",
   },
 }));
 
-const Portfolio2021 = () => {
+const Portfolio = () => {
   const classes = useStyles();
   let data;
   const observer = new IntersectionObserver(
@@ -60,18 +87,27 @@ const Portfolio2021 = () => {
       {/* left FIXED CONTAINER */}
       <Box className={classes.sideContainer} sx={{ left: 0 }}>
         <Stack>
-          {[GitHubIcon, InstagramIcon, TwitterIcon, LinkedInIcon].map(
-            (Icon, idx) => (
-              <IconButton
-                sx={{ width: "50px", height: "50px" }}
-                aria-label="delete"
-                color="slate"
-              >
-                <Icon />
-              </IconButton>
-            )
-          )}
+          {socialData.map(({ url, Icon, id }) => (
+            <IconButton
+              key={`social-icon${id}`}
+              onClick={() => window.open(url)}
+              sx={{ width: "50px", height: "50px" }}
+              aria-label="delete"
+              color="slate"
+            >
+              <Icon />
+            </IconButton>
+          ))}
         </Stack>
+        <Divider
+          sx={{
+            background: "rebeccapurple",
+            height: "100px",
+            width: "1px",
+          }}
+          color="secondary"
+          orientation="column"
+        />
 
         {/* <Divider orientation="vertical" sx={{ color: "white" }} /> */}
       </Box>
@@ -90,22 +126,38 @@ const Portfolio2021 = () => {
       </main>
 
       {/* RIGHT FIXED CONTAINER */}
-      <Box className={classes.sideContainer} sx={{ right: 0 }}>
-        <Typography
-          sx={{
-            // background: "oldlace",
-            transform: "rotate(90deg)",
-            letterSpacing: "3px",
-            fontFamily: "Roboto Mono",
-            cursor: "pointer",
-          }}
-          color="slate"
+      <Box
+        className={classes.sideContainer}
+        sx={{ right: 0, justifyContent: "center !important" }}
+      >
+        <a
+          href="mailto:abhipatel8719@gmail.com"
+          style={{ textDecoration: "none " }}
         >
-          abhipatel8719@gmail.com
-        </Typography>
+          <Typography
+            sx={{
+              // background: "oldlace",
+              transform: "rotate(90deg)",
+              letterSpacing: "3px",
+              fontFamily: "Roboto Mono",
+              cursor: "pointer",
+            }}
+            color="slate"
+          >
+            abhipatel8719@gmail.com
+          </Typography>
+        </a>
+        {/* <Divider
+          sx={{
+            background: "red",
+            height: "200px",
+            width: "1px",
+          }}
+          orientation="column"
+        /> */}
       </Box>
     </div>
   );
 };
 
-export default Portfolio2021;
+export default Portfolio;

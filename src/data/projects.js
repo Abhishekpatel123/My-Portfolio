@@ -1,3 +1,5 @@
+import { strangerTalk } from "../assets";
+
 const projects = [
   {
     id: "1",
@@ -13,7 +15,8 @@ const projects = [
     description:
       "Real Time updating comment web app using HTML , CSS , Javascript , Node js , Socket.io , MONGODB , etc ",
     liveLink: "https://comment-web-app.herokuapp.com",
-    imageURL: "https://comment-web-app.herokuapp.com",
+    githubLink: "https://comment-web-app.herokuapp.com",
+    imageURL: strangerTalk,
   },
   {
     id: "1",
@@ -26,9 +29,9 @@ const projects = [
       "MongoDB",
       "Socket.io",
     ],
-    description:
-      "Ab pade kam paise mai or gher mai rehete hue",
+    description: "Ab pade kam paise mai or gher mai rehete hue",
     liveLink: "https://comment-web-app.herokuapp.com",
+    githubLink: "https://comment-web-app.herokuapp.com",
     imageURL: "https://comment-web-app.herokuapp.com",
   },
 ];
