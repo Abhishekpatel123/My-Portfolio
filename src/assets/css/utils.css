@@ -1,6 +1,7 @@
 .container{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
+    max-width: 1000px;
     /* border: 2px solid rgba(197, 37, 37, 0.938); */
 }
 

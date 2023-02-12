@@ -106,4 +106,7 @@ export default {
     heading: "",
     title: "",
   },
+  achievement: {
+    heading: "Achievements",
+  },
 };

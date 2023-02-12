@@ -1,6 +1,4 @@
-.about {
-  width: 95%;
-}
+
 .about_perspective {
   perspective: 10000px;
   display: flex;
@@ -25,7 +23,7 @@
 
 .about_content h2,
 .about_content p {
-  color: #0e2431;
+  color: white;
   line-height: 28px;
   margin-bottom: 1rem;
   transition: all 0.4s ease-in;

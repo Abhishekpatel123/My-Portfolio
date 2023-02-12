@@ -7,3 +7,6 @@ export { default as Interest } from "./interest/Interest";
 export { default as Skills } from "./skills";
 export { default as Project } from "./project/Project";
 export { default as Status } from "./status/Status";
+export { default as Achievements } from "./achievements";
+export { default as LeftContent } from "./LeftContent";
+export { default as RightContent } from "./RightContent";

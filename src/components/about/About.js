@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import Heading from "utils/Heading/Heading";
-import "./About.css";
-import MYImage from "assets/images/abhishek.jpeg";
-import staticData from "data/staticData";
-import { Zoom } from "react-reveal";
-import { Box, Grid, Typography } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import EjectIcon from "@mui/icons-material/Eject";
+import React, { useEffect } from 'react';
+import Heading from 'utils/Heading/Heading';
+import './About.css';
+import MYImage from 'assets/images/abhishek.jpeg';
+import staticData from 'data/staticData';
+import { Zoom } from 'react-reveal';
+import { Box, Grid, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import EjectIcon from '@mui/icons-material/Eject';
 
 const About = () => {
   const theme = useTheme();
@@ -35,28 +35,24 @@ const About = () => {
   // }, []);
 
   return (
-    <div name="about" className="about container">
-      <Heading questionNo="1" heading={staticData.about.heading} />
+    <div name='about' className='about container'>
+      <Heading questionNo='1' heading={staticData.about.heading} />
       <Zoom>
-        <div className="about_perspective ">
-          <div className=" about_content">
-            <div className="left">
-              <img src={MYImage} alt="my photo" />
+        <div className='about_perspective '>
+          <div className=' about_content'>
+            <div className='left'>
+              <img src={MYImage} alt='my photo' />
             </div>
-            <div className="right">
+            <div className='right'>
               {/* <h1>{staticData.about.title}</h1> */}
               {/* <p>{staticData.about.description}</p> */}
-              <Typography
-                variant="subtitle2"
-                // component="p"
-                sx={{ color: theme.palette.slate.light }}
-              >
+              <p className={{ color: 'red' }}>
                 Hello! My name is Abhishek Patel and I enjoy creating things
                 that live on the internet. My interest in web development
                 started back in 2020
-              </Typography>
+              </p>
               <Typography
-                variant="subtitle2"
+                variant='subtitle2'
                 sx={{ color: theme.palette.slate.light }}
               >
                 Here are a few technologies I’ve been working with recently:
@@ -64,18 +60,18 @@ const About = () => {
 
               <Grid container>
                 <Grid xs={6}>
-                  {["Javascript (ES6+)", "React", "Node.js"]?.map(
+                  {['Javascript (ES6+)', 'React', 'Node.js']?.map(
                     (point, idx) => (
                       <Box
-                        sx={{ display: "flex", alignItems: "center", mt: 1 }}
+                        sx={{ display: 'flex', alignItems: 'center', mt: 1 }}
                       >
                         <EjectIcon
-                          fontSize="15px"
-                          color="secondary"
-                          sx={{ transform: "rotate(90deg)", mr: 1, mb: 0 }}
+                          fontSize='15px'
+                          color='secondary'
+                          sx={{ transform: 'rotate(90deg)', mr: 1, mb: 0 }}
                         />
                         <Typography
-                          variant="subtitle2"
+                          variant='subtitle2'
                           sx={{ color: theme.palette.slate.light }}
                         >
                           {point}
@@ -85,18 +81,18 @@ const About = () => {
                   )}
                 </Grid>
                 <Grid xs={6}>
-                  {["Typescript", "React Native", "Mongodb"]?.map(
+                  {['Typescript', 'React Native', 'Mongodb']?.map(
                     (point, idx) => (
                       <Box
-                        sx={{ display: "flex", alignItems: "center", mt: 1 }}
+                        sx={{ display: 'flex', alignItems: 'center', mt: 1 }}
                       >
                         <EjectIcon
-                          fontSize="15px"
-                          color="secondary"
-                          sx={{ transform: "rotate(90deg)", mr: 1, mb: 0 }}
+                          fontSize='15px'
+                          color='secondary'
+                          sx={{ transform: 'rotate(90deg)', mr: 1, mb: 0 }}
                         />
                         <Typography
-                          variant="subtitle2"
+                          variant='subtitle2'
                           sx={{ color: theme.palette.slate.light }}
                         >
                           {point}
